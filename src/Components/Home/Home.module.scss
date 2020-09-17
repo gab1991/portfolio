@@ -1,0 +1,33 @@
+@import '../../Configs/Variables.scss';
+
+.Home {
+  height: 100vh;
+  min-height: 800px;
+  background: url('../../Assets/Images/Backgrounds/Header_background-hd.jpg');
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-main;
+  color: $font-main-color;
+
+  h1 {
+    margin-top: 100px;
+    font-weight: 600;
+    text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.5);
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  h2 {
+    margin-top: 50px;
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+  }
+  button {
+    margin-top: 80px;
+  }
+}

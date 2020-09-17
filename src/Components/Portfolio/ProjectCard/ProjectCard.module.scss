@@ -1,0 +1,22 @@
+$border-line-color: #c1c1c1;
+
+.ProjectCard {
+  height: 500px;
+  width: 100%;
+  background-color: lightgray;
+  border: 1px solid $border-line-color;
+
+  display: flex;
+}
+
+.ScreenshotArea {
+  width: 50%;
+  height: 100%;
+  background-color: lightpink;
+}
+
+.TextArea {
+  width: 50%;
+  height: 100%;
+  background-color: lightseagreen;
+}
