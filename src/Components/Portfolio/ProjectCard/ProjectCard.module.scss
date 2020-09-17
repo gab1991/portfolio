@@ -1,9 +1,14 @@
+@import '../../../Configs/Variables.scss';
+
 $border-line-color: #c1c1c1;
+$card-top-padding: 35px;
 
 .ProjectCard {
   height: 500px;
+  // margin: 0 100px;
   width: 100%;
-  background-color: lightgray;
+  min-width: 800px;
+  background-color: white;
   border: 1px solid $border-line-color;
 
   display: flex;
@@ -12,11 +17,53 @@ $border-line-color: #c1c1c1;
 .ScreenshotArea {
   width: 50%;
   height: 100%;
-  background-color: lightpink;
+  padding: $card-top-padding 25px;
+
+  .DescktopImg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 }
 
 .TextArea {
+  font-family: $font-main;
+  border-left: 1px solid black;
   width: 50%;
   height: 100%;
-  background-color: lightseagreen;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $card-top-padding 30px;
+
+  h3 {
+    color: $color-beta;
+    font-size: 1.7rem;
+    text-shadow: 5px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  p {
+    margin-top: 20px;
+    max-width: 350px;
+  }
+  h4 {
+    margin-top: 20px;
+    font-family: $font-secondary;
+    font-weight: normal;
+    color: $color-beta;
+    font-size: 1.5rem;
+    text-shadow: 5px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  ul {
+    font-family: $font-secondary;
+    margin-top: 15px;
+    list-style: none;
+    display: block;
+  }
+  li {
+    font-size: 1.2rem;
+  }
+  .TechAreaName {
+    color: $color-gama;
+  }
 }

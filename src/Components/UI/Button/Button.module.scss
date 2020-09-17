@@ -25,3 +25,17 @@
     cursor: default;
   }
 }
+
+.Rounded {
+  background: linear-gradient(
+    80.28deg,
+    #1a2552 9.35%,
+    #1b4a94 46.7%,
+    #1d9dda 96.34%
+  );
+  border-radius: 19px;
+  padding: 10px 30px;
+  font-size: 0.8rem;
+  color: $color-alpha;
+  min-width: 140px;
+}

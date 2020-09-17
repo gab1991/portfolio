@@ -1,4 +1,5 @@
 import React from 'react';
+import { projects } from '../../Configs/Projects';
 import ProjectCard from './ProjectCard/ProjectCard';
 import styles from './Portfolio.module.scss';
 
@@ -24,7 +25,9 @@ export default function Portfolio(props) {
         </div>
       </div>
       <div className={styles.ProjectArea}>
-        <ProjectCard />
+        {projects.map((project) => (
+          <ProjectCard {...project} key={project.name} />
+        ))}
       </div>
     </section>
   );
