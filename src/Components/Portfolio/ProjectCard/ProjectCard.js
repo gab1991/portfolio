@@ -1,19 +1,32 @@
 import React from 'react';
 import Button from '../../UI/Button/Button';
+import WorldSvg from '../../UI/SvgIcons/World';
+import DemoSvg from '../../UI/SvgIcons/Demo';
+import GitHubSvg from '../../UI/SvgIcons/GitHub';
 import styles from '../ProjectCard/ProjectCard.module.scss';
 
 export default function ProjectCard(props) {
-  const { images, title, description, technologies } = props;
-  console.log(images);
+  const {
+    images,
+    title,
+    description,
+    technologies,
+    className,
+    isInverted,
+  } = props;
+
   return (
-    <div className={styles.ProjectCard}>
+    <div
+      className={`${styles.ProjectCard} ${className} ${
+        isInverted ? styles.Inverted : ''
+      }`}>
       <div className={styles.ScreenshotArea}>
         <img src={images.desktop} alt="mobile" className={styles.DescktopImg} />
       </div>
       <div className={styles.TextArea}>
-        <h3>{title}</h3>
-        <p>{description}</p>
-        <h4>TECHNOLOGIES</h4>
+        <h3 className={styles.TitleHeading}>{title}</h3>
+        <p className={styles.Description}>{description}</p>
+        <h4 className={styles.TechHeading}>TECHNOLOGIES</h4>
         <ul>
           <li>
             <span className={styles.TechAreaName}>{`Front End : `}</span>
@@ -25,7 +38,24 @@ export default function ProjectCard(props) {
           </li>
         </ul>
         <div className={styles.BtnSection}>
-          <Button rounded icon txtContent={'CODE'} />
+          <Button
+            rounded
+            Icon={GitHubSvg}
+            txtContent={'CODE'}
+            className={styles.Btn}
+          />
+          <Button
+            rounded
+            Icon={WorldSvg}
+            txtContent={'LIVE'}
+            className={styles.Btn}
+          />
+          <Button
+            rounded
+            Icon={DemoSvg}
+            txtContent={'DEMO'}
+            className={styles.Btn}
+          />
         </div>
       </div>
     </div>

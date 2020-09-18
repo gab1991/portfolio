@@ -1,5 +1,8 @@
 @import '../../../Configs/Variables.scss';
 
+$svg-side: 35px;
+$svg-fill-color: #ead7a6;
+
 .Button {
   font-family: $font-main;
   font-weight: 600;
@@ -16,7 +19,6 @@
   &:hover,
   &:focus {
     transform: translateY(-10%);
-    // background-color: $color-alpha;
   }
   &:focus {
     outline: none;
@@ -33,9 +35,38 @@
     #1b4a94 46.7%,
     #1d9dda 96.34%
   );
-  border-radius: 19px;
+  border-radius: 14px;
   padding: 10px 30px;
-  font-size: 0.8rem;
+  font-family: $font-secondary;
+  font-weight: 600;
+  font-size: 0.9rem;
   color: $color-alpha;
-  min-width: 140px;
+  min-width: 120px;
+}
+
+.Icon {
+  padding: 7px 30px;
+  padding-right: 5px;
+}
+
+.BtnTxtIconWrapper {
+  display: flex;
+
+  .TxtContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+
+  .SvgIconWrapper {
+    height: $svg-side;
+    width: $svg-side;
+    margin-left: auto;
+    svg {
+      path {
+        fill: $svg-fill-color;
+      }
+    }
+  }
 }

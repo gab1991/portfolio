@@ -1,7 +1,7 @@
 @import '../../Configs/Variables.scss';
 
 .Portfolio {
-  background-color: lightskyblue;
+  // background-color: lightskyblue;
 }
 
 .WhiteRibbonWrapper {
@@ -47,10 +47,31 @@
 }
 
 .ProjectArea {
-  margin: 50px 0 150px;
+  margin: 50px 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: lightgreen;
+
+  div:nth-last-child(1) {
+    margin-bottom: 0px;
+  }
+}
+
+.ProjectCard {
+  max-width: 1400px;
+  margin-bottom: 100px;
+}
+
+.BottomWaveWrapper {
+  transform: scaleX(1.01);
+
+  position: relative;
+
+  .BottomWave {
+    transform: translateY(99%);
+    height: 13vh;
+    background-color: white;
+    clip-path: url('#bottomWaveClipPath');
+  }
 }

@@ -24,6 +24,22 @@ const projectImgs = importAll(
 
 const projects = [
   {
+    name: 'Meteora-app',
+    title: 'METEORA',
+    description:
+      'This app is built on Socket.io library and supposed to be a Telegram killer. While using this app you should experience an increbile trip to distant planets.',
+    technologies: {
+      frontEnd: 'React | Socket.io | Redux | SASS',
+      backEnd: 'NodeJs | Express | Socket.io | MySql',
+    },
+    links: {
+      frontEndCode: '#',
+      backEndCode: '#',
+      live: '#',
+      demo: '#',
+    },
+  },
+  {
     name: 'Retro-game-app',
     title: 'RETRO GAME COLLECTION',
     description:
