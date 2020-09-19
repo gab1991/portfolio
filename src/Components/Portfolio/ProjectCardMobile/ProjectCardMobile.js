@@ -1,12 +1,13 @@
-import React from 'react';
-import Button from '../../UI/Button/Button';
+import React, { useState, useRef, useEffect } from 'react';
 import WorldSvg from '../../UI/SvgIcons/World';
 import DemoSvg from '../../UI/SvgIcons/Demo';
 import GitHubSvg from '../../UI/SvgIcons/GitHub';
+import toggleSlider from '../../../Utils/CutomHooks/useSlideDown';
+import Button from '../../UI/Button/Button';
 
-import styles from '../ProjectCard/ProjectCard.module.scss';
+import styles from './ProjectCardMobile.module.scss';
 
-export default function ProjectCard(props) {
+export default function ProjectCardMobile(props) {
   const {
     images,
     title,
@@ -16,16 +17,27 @@ export default function ProjectCard(props) {
     isInverted,
   } = props;
 
+  const [isOpen, setIsOpen] = useState(false);
+  const sliderContainerRef = useRef();
+
+  useEffect(() => {
+    toggleSlider(sliderContainerRef.current);
+  }, [isOpen]);
+
+  const onClickHandler = (e) => {
+    setIsOpen((prev) => !prev);
+  };
+
   return (
-    <div
-      className={`${styles.ProjectCard} ${className} ${
-        isInverted ? styles.Inverted : ''
-      }`}>
-      <div className={styles.ScreenshotArea}>
-        <img src={images.desktop} alt="mobile" className={styles.DescktopImg} />
+    <div className={`${styles.ProjectCard}`}>
+      <div className={styles.ScreenShotWrapper}>
+        <img src={images.mobile} alt="mobile" className={styles.PreviewImg} />
       </div>
-      <div className={styles.TextArea}>
-        <h3 className={styles.TitleHeading}>{title}</h3>
+      <h3 className={styles.TitleHeading}>{title}</h3>
+      <div
+        ref={sliderContainerRef}
+        className={`${styles.ExpandableContainer}`}
+        data-collapsed="first-render">
         <p className={styles.Description}>{description}</p>
         <h4 className={styles.TechHeading}>TECHNOLOGIES</h4>
         <ul>
@@ -59,6 +71,11 @@ export default function ProjectCard(props) {
           />
         </div>
       </div>
+      <Button
+        txtContent={isOpen ? 'CLOSE' : 'LEARN MORE'}
+        className={styles.MainBtn}
+        onClick={onClickHandler}
+      />
     </div>
   );
 }

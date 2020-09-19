@@ -9,20 +9,38 @@ $footer-background-color: $color-epsilon;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @include respond-to('mobile') {
+    height: 200px;
+  }
 }
 
 .Btn {
   margin: auto;
   width: 400px;
+  // padding: 25px 0;
   padding-top: 25px;
   padding-bottom: 25px;
   color: $color-epsilon;
+
+  @include respond-to('mobile') {
+    width: 70%;
+    min-width: 200px;
+    max-width: 300px;
+
+    font-size: 1rem;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: $color-epsilon;
+  }
 }
 
 .ContacList {
   margin: auto;
   list-style: none;
   display: flex;
+  justify-content: center;
   font-family: $font-secondary;
   font-size: 1.5rem;
   color: $font-main-color;

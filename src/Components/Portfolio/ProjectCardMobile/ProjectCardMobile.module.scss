@@ -1,0 +1,111 @@
+@import '../../../Configs/Variables.scss';
+
+// $border-line-color: #c1c1c186;
+// $card-top-padding: 35px;
+
+.ProjectCard {
+  width: 90%;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.ScreenShotWrapper {
+  width: 90%;
+  height: 0;
+  transform: translateY(-5%);
+  background-color: white;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  padding-top: 56.25%;
+  position: relative;
+  border-radius: 5px;
+
+  .PreviewImg {
+    //keeping aspectRatio
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.TitleHeading {
+  font-family: $font-secondary;
+  font-weight: 400;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  color: $color-beta;
+  font-size: 1.4rem;
+  // margin-bottom: 25px;
+}
+
+.ExpandableContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  opacity: 0;
+  width: 90%;
+  transition: all 500ms ease-in-out;
+  height: 0px;
+
+  &[data-collapsed='false'] {
+    opacity: 1;
+    height: auto;
+  }
+}
+
+.Description {
+  width: 90%;
+  font-family: $font-main;
+  margin: 20px 0;
+}
+
+.TechHeading {
+  font-family: $font-secondary;
+  font-weight: normal;
+  color: $color-beta;
+  font-size: 1.3rem;
+  text-shadow: 5px 2px 5px rgba(0, 0, 0, 0.3);
+}
+ul {
+  width: 90%;
+  font-family: $font-secondary;
+  margin-top: 15px;
+  list-style: none;
+}
+li {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.BtnSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  margin-top: 25px;
+  max-width: 300px;
+
+  .Btn {
+    margin: 10px;
+    margin-bottom: 5px;
+  }
+}
+
+.MainBtn {
+  width: 80%;
+  box-shadow: none;
+  background-color: $color-delta;
+  color: $font-main-color;
+  font-size: 0.7rem;
+  margin: 20px 0;
+}

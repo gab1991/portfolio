@@ -28,4 +28,8 @@
     flex: 1;
     font-size: 1.2rem;
   }
+
+  @include respond-to('mobile') {
+    display: none;
+  }
 }

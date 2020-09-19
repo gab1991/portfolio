@@ -16,17 +16,37 @@
   font-family: $font-main;
   color: $font-main-color;
   padding: 0 8%;
+
+  @include respond-to('mobile') {
+    background: url('../../Assets/Images/Backgrounds/About_background_mobile.jpg'),
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0.01%,
+        rgba(0, 0, 0, 0.93) 100%
+      );
+    background-blend-mode: overlay;
+    background-size: 100% 100%;
+  }
 }
 
 .Title {
   margin-top: 20vh;
   width: 100%;
   font-size: 3rem;
+
+  @include respond-to('mobile') {
+    text-align: center;
+  }
 }
 
 .Description {
   margin-top: 50px;
   font-size: 1.7rem;
+
+  @include respond-to('mobile') {
+    margin-top: 50px;
+    font-size: 1.4rem;
+  }
 }
 
 .TechList {
@@ -38,18 +58,39 @@
     font-size: 1.7rem;
     margin-bottom: 50px;
     display: flex;
+
     flex-wrap: wrap;
+
+    @include respond-to('mobile') {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
 
     span {
       display: flex;
       align-items: center;
       white-space: nowrap;
+
+      @include respond-to('mobile') {
+        width: 100%;
+        justify-content: center;
+      }
     }
   }
+
   .SvgWrapper {
     height: 60px;
     width: 60px;
     margin-left: 2%;
+
+    @include respond-to('mobile') {
+      margin: 10px auto;
+    }
+
+    svg {
+      height: 60px;
+      width: 60px;
+    }
 
     &.BiggerSvg {
       width: 120px;

@@ -26,6 +26,12 @@ $svg-fill-color: #ead7a6;
   &:disabled {
     cursor: default;
   }
+
+  @include respond-to('mobile') {
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 15px 10px;
+  }
 }
 
 .Gradient {
@@ -89,6 +95,11 @@ $svg-fill-color: #ead7a6;
     height: $svg-side;
     width: $svg-side;
     margin-left: auto;
+
+    @include respond-to('mobile') {
+      height: 20px;
+      width: 20px;
+    }
 
     svg {
       path {
