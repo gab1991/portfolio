@@ -7,22 +7,27 @@ export default function Button(props) {
     onClick: clickHander,
     disabled,
     className,
-    rounded,
+    gradient,
+    footer,
     Icon,
+    iconOnleft = false,
   } = props;
 
-  console.log(className);
+  console.log(iconOnleft);
 
   return (
     <button
       onClick={clickHander}
       disabled={disabled}
-      className={`${styles.Button} ${rounded ? styles.Rounded : ''} ${
-        Icon ? styles.Icon : ''
-      } ${className}`}>
+      className={`${styles.Button} 
+      ${gradient ? styles.Gradient : ''} 
+      ${Icon && gradient && !iconOnleft ? styles.IconRight : ''} 
+      ${Icon && gradient && iconOnleft ? styles.IconLeft : ''}
+      ${Icon && footer ? styles.FooterIcon : ''}
+      ${className}`}>
       {Icon ? (
-        <div className={styles.BtnTxtIconWrapper}>
-          <p className={styles.TxtContainer}> {txtContent}</p>
+        <div className={`${styles.BtnTxtIconWrapper}`}>
+          <p className={styles.TxtContainer}>{txtContent}</p>
           <div className={styles.SvgIconWrapper}>
             <Icon />
           </div>

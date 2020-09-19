@@ -28,7 +28,7 @@ $svg-fill-color: #ead7a6;
   }
 }
 
-.Rounded {
+.Gradient {
   background: linear-gradient(
     80.28deg,
     #1a2552 9.35%,
@@ -36,7 +36,7 @@ $svg-fill-color: #ead7a6;
     #1d9dda 96.34%
   );
   border-radius: 14px;
-  padding: 10px 30px;
+  padding: 7px 30px;
   font-family: $font-secondary;
   font-weight: 600;
   font-size: 0.9rem;
@@ -44,9 +44,35 @@ $svg-fill-color: #ead7a6;
   min-width: 120px;
 }
 
-.Icon {
-  padding: 7px 30px;
+.IconRight {
   padding-right: 5px;
+}
+
+.IconLeft {
+  padding-left: 5px;
+
+  .BtnTxtIconWrapper {
+    flex-direction: row-reverse;
+    .SvgIconWrapper {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+}
+
+.FooterIcon {
+  .BtnTxtIconWrapper {
+    flex-direction: row-reverse;
+    .SvgIconWrapper {
+      margin-left: 0;
+      margin-right: auto;
+      svg {
+        path {
+          fill: currentColor;
+        }
+      }
+    }
+  }
 }
 
 .BtnTxtIconWrapper {
@@ -63,6 +89,7 @@ $svg-fill-color: #ead7a6;
     height: $svg-side;
     width: $svg-side;
     margin-left: auto;
+
     svg {
       path {
         fill: $svg-fill-color;

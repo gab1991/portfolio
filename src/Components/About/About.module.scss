@@ -1,8 +1,7 @@
 @import '../../Configs/Variables.scss';
 
 .About {
-  height: 100vh;
-  min-height: 800px;
+  min-height: 100vh;
   background: url('../../Assets/Images/Backgrounds/About_background_hd.jpg'),
     linear-gradient(
       180deg,
@@ -22,7 +21,7 @@
 .Title {
   margin-top: 20vh;
   width: 100%;
-  font-size: 3.7rem;
+  font-size: 3rem;
 }
 
 .Description {

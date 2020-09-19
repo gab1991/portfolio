@@ -9,7 +9,7 @@ export default function Header(props) {
           <li>PORTFOLIO</li>
           <li>ABOUT</li>
           <li>RESUME</li>
-          <li>CONTACT</li>
+          <li>CONTACTS</li>
         </ul>
       </nav>
     </header>

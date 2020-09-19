@@ -39,19 +39,19 @@ export default function ProjectCard(props) {
         </ul>
         <div className={styles.BtnSection}>
           <Button
-            rounded
+            gradient
             Icon={GitHubSvg}
             txtContent={'CODE'}
             className={styles.Btn}
           />
           <Button
-            rounded
+            gradient
             Icon={WorldSvg}
             txtContent={'LIVE'}
             className={styles.Btn}
           />
           <Button
-            rounded
+            gradient
             Icon={DemoSvg}
             txtContent={'DEMO'}
             className={styles.Btn}
