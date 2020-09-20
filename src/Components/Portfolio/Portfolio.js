@@ -13,7 +13,7 @@ export default function Portfolio(props) {
   const isMobile = mobileBreakPointWidth >= width;
 
   return (
-    <section className={styles.Portfolio}>
+    <section className={styles.Portfolio} id={'portfolio'}>
       <div className={styles.WhiteRibbonWrapper}>
         <div className={styles.WhiteRibbon}>
           <div className={styles.SectionNameContainer}>

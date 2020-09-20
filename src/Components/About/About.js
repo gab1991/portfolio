@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from '../UI/Link/Link';
 import JSSvg from '../UI/SvgIcons/Js';
 import ReactSvg from '../UI/SvgIcons/React';
 import ReduxSvg from '../UI/SvgIcons/Redux';
@@ -7,6 +8,7 @@ import CssSvg from '../UI/SvgIcons/CSS';
 import SassSvg from '../UI/SvgIcons/Sass';
 import NodeJsSvg from '../UI/SvgIcons/NodeJS';
 import MySqlSvg from '../UI/SvgIcons/MySql';
+import DownloadSvg from '../UI/SvgIcons/Download';
 import styles from './About.module.scss';
 
 export default function About(props) {
@@ -14,7 +16,7 @@ export default function About(props) {
   const backeEndIcons = [NodeJsSvg, MySqlSvg];
 
   return (
-    <section className={styles.About}>
+    <section className={styles.About} id={'about'}>
       <h2 className={styles.Title}>ABOUT</h2>
       <p className={styles.Description}>
         I’m a tenacious self-taught programmer, I use continuous iteration to
@@ -41,6 +43,10 @@ export default function About(props) {
           ))}
         </li>
       </ul>
+      <div className={styles.ResumeSection} id={'resume'}>
+        <Link txtContent={`Download Resume (RUS)`} IconSvg={DownloadSvg} />
+        <Link txtContent={`Download Resume (ENG)`} IconSvg={DownloadSvg} />
+      </div>
     </section>
   );
 }

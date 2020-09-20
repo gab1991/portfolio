@@ -5,7 +5,7 @@ import styles from '../Footer/Footer.module.scss';
 
 export default function Footer(props) {
   return (
-    <footer className={styles.Footer}>
+    <footer className={styles.Footer} id={'contacts'}>
       <Button
         txtContent={'GET IN TOUCH'}
         Icon={Envelope}

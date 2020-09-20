@@ -4,7 +4,7 @@ $border-line-color: #c1c1c186;
 $card-top-padding: 35px;
 
 .ProjectCard {
-  height: 500px;
+  min-height: 500px;
   width: 100%;
   min-width: 800px;
   border-top: 1px solid $border-line-color;
@@ -18,7 +18,7 @@ $card-top-padding: 35px;
 
 .ScreenshotArea {
   width: 50%;
-  height: 100%;
+
   padding: $card-top-padding 25px;
 
   .DescktopImg {
@@ -29,7 +29,6 @@ $card-top-padding: 35px;
 }
 
 .TextArea {
-  font-family: $font-main;
   width: 50%;
   height: 100%;
 
@@ -37,7 +36,8 @@ $card-top-padding: 35px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: $card-top-padding 30px 0px 30px;
+
+  padding: $card-top-padding 30px;
 
   .TitleHeading {
     color: $color-beta;
@@ -48,6 +48,7 @@ $card-top-padding: 35px;
     margin-top: 20px;
     max-width: 350px;
   }
+
   .TechHeading {
     margin-top: 20px;
     font-family: $font-secondary;
@@ -60,10 +61,10 @@ $card-top-padding: 35px;
     font-family: $font-secondary;
     margin-top: 15px;
     list-style: none;
-    display: block;
+    text-align: start;
   }
   li {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .TechAreaName {
     color: $color-gama;

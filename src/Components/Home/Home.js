@@ -10,6 +10,10 @@ export default function Home(props) {
   const { width } = useWindowSize();
   const isMobile = mobileBreakPointWidth >= width;
 
+  const goToPortfolio = () => {
+    window.location.href = '#portfolio';
+  };
+
   return (
     <section className={styles.Home}>
       <h1>IGOR KORNILOV</h1>
@@ -18,7 +22,11 @@ export default function Home(props) {
           ? 'FRONT END ENGINEER'
           : 'FRONT END FOCUSED WITH FULL STACK EXPERIENCE'}
       </h2>
-      <Button txtContent={'CHECK MY WORK'} className={styles.Btn} />
+      <Button
+        txtContent={'CHECK MY WORK'}
+        className={styles.Btn}
+        onClick={goToPortfolio}
+      />
     </section>
   );
 }

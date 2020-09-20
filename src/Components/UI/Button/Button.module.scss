@@ -99,6 +99,7 @@ $svg-fill-color: #ead7a6;
     @include respond-to('mobile') {
       height: 20px;
       width: 20px;
+      margin-left: 5px;
     }
 
     svg {

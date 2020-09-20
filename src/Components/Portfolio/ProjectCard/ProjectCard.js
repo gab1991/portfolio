@@ -22,7 +22,7 @@ export default function ProjectCard(props) {
         isInverted ? styles.Inverted : ''
       }`}>
       <div className={styles.ScreenshotArea}>
-        <img src={images.desktop} alt="mobile" className={styles.DescktopImg} />
+        <img src={images.desktop} alt="pc" className={styles.DescktopImg} />
       </div>
       <div className={styles.TextArea}>
         <h3 className={styles.TitleHeading}>{title}</h3>

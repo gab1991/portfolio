@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import WorldSvg from '../../UI/SvgIcons/World';
 import DemoSvg from '../../UI/SvgIcons/Demo';
 import GitHubSvg from '../../UI/SvgIcons/GitHub';
-import toggleSlider from '../../../Utils/CutomHooks/useSlideDown';
+import toggleSlider from '../../../Utils/expandSection';
 import Button from '../../UI/Button/Button';
 
 import styles from './ProjectCardMobile.module.scss';
@@ -29,7 +29,7 @@ export default function ProjectCardMobile(props) {
   };
 
   return (
-    <div className={`${styles.ProjectCard}`}>
+    <div className={`${styles.ProjectCard} ${className}`}>
       <div className={styles.ScreenShotWrapper}>
         <img src={images.mobile} alt="mobile" className={styles.PreviewImg} />
       </div>
@@ -37,7 +37,8 @@ export default function ProjectCardMobile(props) {
       <div
         ref={sliderContainerRef}
         className={`${styles.ExpandableContainer}`}
-        data-collapsed="first-render">
+        // data-collapsed="first-render"
+      >
         <p className={styles.Description}>{description}</p>
         <h4 className={styles.TechHeading}>TECHNOLOGIES</h4>
         <ul>

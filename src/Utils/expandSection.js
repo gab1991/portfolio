@@ -1,11 +1,9 @@
-// This is the important part!
-
 function collapseSection(element) {
   // get the height of the element's inner content, regardless of its actual size
-  var sectionHeight = element.scrollHeight;
+  const sectionHeight = element.scrollHeight;
 
   // temporarily disable all css transitions
-  var elementTransition = element.style.transition;
+  const elementTransition = element.style.transition;
   element.style.transition = '';
 
   // on the next frame (as soon as the previous style change has taken effect),
@@ -28,7 +26,7 @@ function collapseSection(element) {
 
 function expandSection(element) {
   // get the height of the element's inner content, regardless of its actual size
-  var sectionHeight = element.scrollHeight;
+  const sectionHeight = element.scrollHeight;
 
   // have the element transition to the height of its inner content
   element.style.height = sectionHeight + 'px';
@@ -46,15 +44,8 @@ function expandSection(element) {
   element.setAttribute('data-collapsed', 'false');
 }
 
-export default function toggleSlider(elmRef) {
+export default function toggleExpandSection(elmRef) {
   var isCollapsed = elmRef.getAttribute('data-collapsed') === 'true';
-  const isFirstRender =
-    elmRef.getAttribute('data-collapsed') === 'first-render';
-
-  if (isFirstRender) {
-    elmRef.setAttribute('data-collapsed', 'true');
-    return;
-  }
 
   if (isCollapsed) {
     expandSection(elmRef);

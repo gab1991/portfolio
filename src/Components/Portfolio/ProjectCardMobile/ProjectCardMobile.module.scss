@@ -1,8 +1,5 @@
 @import '../../../Configs/Variables.scss';
 
-// $border-line-color: #c1c1c186;
-// $card-top-padding: 35px;
-
 .ProjectCard {
   width: 90%;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
@@ -10,7 +7,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 100px;
 }
 
 .ScreenShotWrapper {
@@ -24,7 +20,6 @@
   border-radius: 5px;
 
   .PreviewImg {
-    //keeping aspectRatio
     position: absolute;
     top: 0;
     left: 0;
@@ -42,8 +37,7 @@
   font-weight: 400;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   color: $color-beta;
-  font-size: 1.4rem;
-  // margin-bottom: 25px;
+  font-size: 1.7rem;
 }
 
 .ExpandableContainer {
@@ -60,6 +54,20 @@
     opacity: 1;
     height: auto;
   }
+
+  ul {
+    text-align: center;
+    width: 90%;
+    font-family: $font-secondary;
+    margin-top: 15px;
+    list-style: none;
+  }
+  li {
+    .TechAreaName {
+      color: $color-gama;
+    }
+    font-size: 1.1rem;
+  }
 }
 
 .Description {
@@ -75,16 +83,6 @@
   font-size: 1.3rem;
   text-shadow: 5px 2px 5px rgba(0, 0, 0, 0.3);
 }
-ul {
-  width: 90%;
-  font-family: $font-secondary;
-  margin-top: 15px;
-  list-style: none;
-}
-li {
-  text-align: center;
-  font-size: 1.1rem;
-}
 
 .BtnSection {
   display: flex;
@@ -96,6 +94,7 @@ li {
   max-width: 300px;
 
   .Btn {
+    min-width: 100px;
     margin: 10px;
     margin-bottom: 5px;
   }
@@ -107,5 +106,5 @@ li {
   background-color: $color-delta;
   color: $font-main-color;
   font-size: 0.7rem;
-  margin: 20px 0;
+  margin: 15px 0 20px 0;
 }
