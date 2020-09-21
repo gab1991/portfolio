@@ -37,8 +37,6 @@
       transition: all 300ms ease-in-out;
 
       &.NavOpen {
-        transition: all 300ms ease-in-out;
-        // display: block;
         transform: translateX(0%);
       }
     }
@@ -72,7 +70,6 @@
 .EscSvgWrapper {
   display: none;
   cursor: pointer;
-  // transition: all 300ms ease-in-out;
 
   @include respond-to('mobile') {
     display: block;
