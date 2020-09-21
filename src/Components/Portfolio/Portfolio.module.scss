@@ -14,14 +14,26 @@
   filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.5));
 
   .WhiteRibbon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     transform: translateY(-35%);
     width: 100%;
     min-height: 420px;
     max-height: 600px;
-
     height: 50vh;
     background-color: $color-alpha;
     clip-path: url('#ribbonClipPath');
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
 
     @include respond-to('mobile') {
       min-height: 300px;
