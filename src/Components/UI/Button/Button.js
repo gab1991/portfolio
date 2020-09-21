@@ -4,7 +4,7 @@ import styles from './Button.module.scss';
 export default function Button(props) {
   const {
     txtContent,
-    onClick: clickHander,
+    onClick,
     disabled,
     className,
     gradient,
@@ -13,11 +13,9 @@ export default function Button(props) {
     iconOnleft = false,
   } = props;
 
-  console.log(iconOnleft);
-
   return (
     <button
-      onClick={clickHander}
+      onClick={onClick}
       disabled={disabled}
       className={`${styles.Button} 
       ${gradient ? styles.Gradient : ''} 

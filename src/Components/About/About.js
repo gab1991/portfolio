@@ -44,8 +44,16 @@ export default function About(props) {
         </li>
       </ul>
       <div className={styles.ResumeSection} id={'resume'}>
-        <Link txtContent={`Download Resume (RUS)`} IconSvg={DownloadSvg} />
-        <Link txtContent={`Download Resume (ENG)`} IconSvg={DownloadSvg} />
+        <Link
+          txtContent={`Download Resume (RUS)`}
+          IconSvg={DownloadSvg}
+          className={styles.Link}
+        />
+        <Link
+          txtContent={`Download Resume (ENG)`}
+          IconSvg={DownloadSvg}
+          className={styles.Link}
+        />
       </div>
     </section>
   );

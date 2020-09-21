@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import HamburgerSvg from '../UI/SvgIcons/Hamburger';
 import EscSvg from '../UI/SvgIcons/Esc';
 import styles from './Header.module.scss';

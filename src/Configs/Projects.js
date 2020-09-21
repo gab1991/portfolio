@@ -1,3 +1,13 @@
+import MeteoraVideo from '../Assets/Video/Meteora.webm';
+import RetroGameVideo from '../Assets/Video/Retro Games Colleсtion.webm';
+
+const personalInfo = {
+  email: 'gaber32188@gmail.com',
+  facebook: 'https://www.facebook.com/profile.php?id=100009140675554',
+  telegram: 'https://t.me/IgorKornilov',
+  github: 'https://github.com/gab1991',
+};
+
 function importAll(r) {
   let images = {};
   r.keys().map((item, index) => {
@@ -33,10 +43,10 @@ const projects = [
       backEnd: 'NodeJs | Express | Socket.io | MySql',
     },
     links: {
-      frontEndCode: '#',
-      backEndCode: '#',
-      live: '#',
-      demo: '#',
+      frontEndCode: 'https://github.com/gab1991/online-chat',
+      backEndCode: 'https://github.com/gab1991/online-chat-server',
+      live: 'http://meteora-app.igor-kornilov.com/',
+      demo: MeteoraVideo,
     },
   },
   {
@@ -49,10 +59,11 @@ const projects = [
       backEnd: 'NodeJs | Express | MondoDB',
     },
     links: {
-      frontEndCode: '#',
-      backEndCode: '#',
-      live: '#',
-      demo: '#',
+      frontEndCode: 'https://github.com/gab1991/retro-game-collection-app',
+      backEndCode:
+        'https://github.com/gab1991/server-retro-game-collection-app',
+      live: 'http://retro-game-app.igor-kornilov.com/',
+      demo: RetroGameVideo,
     },
   },
 ];
@@ -61,4 +72,4 @@ projects.forEach((project) => {
   project.images = projectImgs[project.name];
 }, []);
 
-export { projects };
+export { projects, personalInfo };

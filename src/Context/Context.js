@@ -1,3 +1,5 @@
 import React from 'react';
 
-export const ShowModal = React.createContext(false);
+const Context = React.createContext(false);
+
+export { Context };

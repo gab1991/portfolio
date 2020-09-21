@@ -61,6 +61,7 @@ export default function Portfolio(props) {
           const ProjectCard = isMobile ? ProjectCardMobile : ProjectCardPc;
           return (
             <ProjectCard
+              setShowModal={props.setShowModal}
               {...project}
               key={project.name}
               className={styles.ProjectCard}
