@@ -1,11 +1,15 @@
 import MeteoraVideo from '../Assets/Video/Meteora.webm';
 import RetroGameVideo from '../Assets/Video/Retro Games Colleсtion.webm';
+import resumeRus from '../Assets/Resume/resume_rus.pdf';
+import resumeEng from '../Assets/Resume/resume_eng.pdf';
 
 const personalInfo = {
   email: 'gaber32188@gmail.com',
   facebook: 'https://www.facebook.com/profile.php?id=100009140675554',
   telegram: 'https://t.me/IgorKornilov',
   github: 'https://github.com/gab1991',
+  resume_rus: resumeRus,
+  resume_eng: resumeEng,
 };
 
 function importAll(r) {

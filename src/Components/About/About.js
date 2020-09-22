@@ -1,4 +1,5 @@
 import React from 'react';
+import { personalInfo } from '../../Configs/Projects';
 import Link from '../UI/Link/Link';
 import JSSvg from '../UI/SvgIcons/Js';
 import ReactSvg from '../UI/SvgIcons/React';
@@ -48,11 +49,13 @@ export default function About(props) {
           txtContent={`Download Resume (RUS)`}
           IconSvg={DownloadSvg}
           className={styles.Link}
+          href={personalInfo.resume_rus}
         />
         <Link
           txtContent={`Download Resume (ENG)`}
           IconSvg={DownloadSvg}
           className={styles.Link}
+          href={personalInfo.resume_eng}
         />
       </div>
     </section>

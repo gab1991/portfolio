@@ -9,7 +9,7 @@ export default function Link(props) {
       href={href}
       className={`${styles.Link} ${className}`}
       target={blank ? '_blank' : null}
-      rel="noopener">
+      rel="noopener noreferrer">
       {IconSvg && <IconSvg />}
       <span className={styles.TxtContent}>{txtContent}</span>
     </a>
