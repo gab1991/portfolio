@@ -4,7 +4,6 @@ import DemoSvg from '../../UI/SvgIcons/Demo';
 import GitHubSvg from '../../UI/SvgIcons/GitHub';
 import toggleSlider from '../../../Utils/expandSection';
 import Button from '../../UI/Button/Button';
-
 import styles from './ProjectCardMobile.module.scss';
 
 export default function ProjectCardMobile(props) {
@@ -15,7 +14,6 @@ export default function ProjectCardMobile(props) {
     technologies,
     links,
     className,
-    isInverted,
     setShowModal,
   } = props;
 
@@ -51,7 +49,6 @@ export default function ProjectCardMobile(props) {
           url: links.frontEndCode,
           Icon: GitHubSvg,
         },
-        ,
         {
           txtContent: 'Back End Code',
           url: links.backEndCode,

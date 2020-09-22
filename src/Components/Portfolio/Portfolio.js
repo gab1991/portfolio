@@ -6,7 +6,6 @@ import styles from './Portfolio.module.scss';
 
 export default function Portfolio(props) {
   const { isMobile } = props;
-
   return (
     <section className={styles.Portfolio} id={'portfolio'}>
       <div className={styles.WhiteRibbonWrapper}>

@@ -19,6 +19,6 @@ export default function useResizeClassAddeer(elm, className, stopTimeMs = 400) {
 
     window.addEventListener('resize', callback);
     return () => window.removeEventListener('resize', callback);
-  }, [elm]);
+  }, [elm, className, stopTimeMs, isClient]);
   return;
 }

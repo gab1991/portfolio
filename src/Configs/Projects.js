@@ -11,9 +11,9 @@ const personalInfo = {
 function importAll(r) {
   let images = {};
   r.keys().map((item, index) => {
-    const folderRegex = /(?<=\/)[^\/]*(?=\/[^\/]*$)/;
+    const folderRegex = /(?<=\/)[^/]*(?=\/[^/]*$)/;
     const trimExtintionRegex = /(.+?)(\.[^.]*$|$)/;
-    const allAfterLastSlashRegex = /([^\/]+$)/;
+    const allAfterLastSlashRegex = /([^/]+$)/;
 
     const folderName = item.match(folderRegex)[0];
     images[folderName] = images[folderName] || {};

@@ -20,17 +20,26 @@ export default function Footer(props) {
       />
       <ul className={styles.ContacList}>
         <li>
-          <a href={personalInfo.facebook} target="_blank" rel="noopener">
+          <a
+            href={personalInfo.facebook}
+            target="_blank"
+            rel="noopener noreferrer">
             FACEBOOK
           </a>
         </li>
         <li>
-          <a href={personalInfo.telegram} target="_blank" rel="noopener">
+          <a
+            href={personalInfo.telegram}
+            target="_blank"
+            rel="noopener noreferrer">
             TELEGRAM
           </a>
         </li>
         <li>
-          <a href={personalInfo.github} target="_blank" rel="noopener">
+          <a
+            href={personalInfo.github}
+            target="_blank"
+            rel="noopener noreferrer">
             GITHUB
           </a>
         </li>

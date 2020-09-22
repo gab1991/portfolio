@@ -3,7 +3,6 @@ import Button from '../../UI/Button/Button';
 import WorldSvg from '../../UI/SvgIcons/World';
 import DemoSvg from '../../UI/SvgIcons/Demo';
 import GitHubSvg from '../../UI/SvgIcons/GitHub';
-import DownloadSvg from '../../UI/SvgIcons/Download';
 
 import styles from '../ProjectCard/ProjectCard.module.scss';
 
@@ -20,20 +19,17 @@ export default function ProjectCard(props) {
   } = props;
 
   const modalHandler = (type) => {
-    switch(type) {
-      case 'demo video' : {
-
-        break;
-      } 
-      case 'code links' : {
-
+    switch (type) {
+      case 'demo video': {
         break;
       }
-      default  : {
-        
+      case 'code links': {
+        break;
+      }
+      default: {
       }
     }
-    
+
     const modalContent = {
       heading: 'Pick one to learn more',
       type: type,
@@ -43,7 +39,6 @@ export default function ProjectCard(props) {
           url: links.frontEndCode,
           Icon: GitHubSvg,
         },
-        ,
         {
           txtContent: 'Back End Code',
           url: links.backEndCode,
