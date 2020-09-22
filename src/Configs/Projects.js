@@ -19,10 +19,8 @@ function importAll(r) {
     const trimExtintionRegex = /(.+?)(\.[^.]*$|$)/;
     const allAfterLastSlashRegex = /([^/]+$)/;
 
-    console.log(item);
     const folderName = item.match(folderRegex)[1];
 
-    console.log(folderName);
     images[folderName] = images[folderName] || {};
 
     const fileNameWithExtension = item.match(allAfterLastSlashRegex)[0];
