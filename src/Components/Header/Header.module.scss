@@ -36,6 +36,10 @@
       transform: translateX(105%);
       transition: all 300ms ease-in-out;
 
+      &.StopTransitions {
+        transition: none !important;
+      }
+
       &.NavOpen {
         transform: translateX(0%);
       }

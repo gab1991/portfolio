@@ -3,14 +3,9 @@ import { projects } from '../../Configs/Projects';
 import ProjectCardPc from './ProjectCard/ProjectCard';
 import ProjectCardMobile from './ProjectCardMobile/ProjectCardMobile';
 import styles from './Portfolio.module.scss';
-import sassVars from '../../Configs/Variables.scss';
-import useWindowSize from '../../Utils/CutomHooks/useWinowSize';
-
-const mobileBreakPointWidth = parseInt(sassVars['breakpoints-mobile']);
 
 export default function Portfolio(props) {
-  const { width } = useWindowSize();
-  const isMobile = mobileBreakPointWidth >= width;
+  const { isMobile } = props;
 
   return (
     <section className={styles.Portfolio} id={'portfolio'}>

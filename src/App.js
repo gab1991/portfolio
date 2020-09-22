@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-// import { ShowModal } from './Context/Context';
+import useWindowSize from './Utils/CutomHooks/useWinowSize';
+
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import Portfolio from './Components/Portfolio/Portfolio';
@@ -7,21 +8,24 @@ import About from './Components/About/About';
 import Footer from './Components/Footer/Footer';
 import Modal from './Components/UI/Modal/Modal';
 import styles from './App.module.scss';
+import sassVars from './Configs/Variables.scss';
+
+const mobileBreakPointWidth = parseInt(sassVars['breakpoints-mobile']);
 
 function App() {
+  const { width } = useWindowSize();
+  const isMobile = mobileBreakPointWidth >= width;
   const [showModal, setShowModal] = useState({
     status: false,
     data: {},
   });
 
-  console.log(showModal);
-
   return (
     <div className={styles.App}>
-      <Header />
+      <Header isMobile={isMobile} />
       <main>
         <Home />
-        <Portfolio setShowModal={setShowModal} />
+        <Portfolio setShowModal={setShowModal} isMobile={isMobile} />
         <About />
       </main>
       <Footer />
