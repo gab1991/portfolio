@@ -21,7 +21,7 @@ export default function ProjectCardMobile(props) {
   const sliderContainerRef = useRef();
 
   useEffect(() => {
-    toggleSlider(sliderContainerRef.current);
+    toggleSlider(sliderContainerRef.current, styles.TransitionBlocked);
   }, [isOpen]);
 
   const onClickHandler = (e) => {
@@ -71,7 +71,10 @@ export default function ProjectCardMobile(props) {
         <img src={images.mobile} alt="mobile" className={styles.PreviewImg} />
       </div>
       <h3 className={styles.TitleHeading}>{title}</h3>
-      <div ref={sliderContainerRef} className={`${styles.ExpandableContainer}`}>
+      <div
+        ref={sliderContainerRef}
+        className={`${styles.ExpandableContainer}`}
+        data-firstload={true}>
         <p className={styles.Description}>{description}</p>
         <h4 className={styles.TechHeading}>TECHNOLOGIES</h4>
         <ul>

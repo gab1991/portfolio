@@ -47,13 +47,21 @@
   overflow: hidden;
   opacity: 0;
   width: 90%;
+  // height: 0px;
   transition: all 500ms ease-in-out;
-  height: 0px;
+
+  &.TransitionBlocked {
+    transition: none;
+  }
 
   &[data-collapsed='false'] {
     opacity: 1;
     height: auto;
   }
+  // &[data-collapsed='true'] {
+  //   transition: all 500ms ease-in-out;
+  //   height: auto;
+  // }
 
   ul {
     text-align: center;

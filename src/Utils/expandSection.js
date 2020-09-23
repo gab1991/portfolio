@@ -44,8 +44,24 @@ function expandSection(element) {
   element.setAttribute('data-collapsed', 'false');
 }
 
-export default function toggleExpandSection(elmRef) {
+export default function toggleExpandSection(
+  elmRef,
+  blockTransitionClass,
+  transitionBlockDelay = 400
+) {
+  var isFirstLoad = elmRef.getAttribute('data-firstload') === 'true';
   var isCollapsed = elmRef.getAttribute('data-collapsed') === 'true';
+  let timer;
+
+  if (isFirstLoad) {
+    elmRef.classList.add(blockTransitionClass);
+    clearTimeout(timer);
+
+    timer = setTimeout(() => {
+      elmRef.classList.remove(blockTransitionClass);
+      elmRef.removeAttribute('data-firstload', false);
+    }, transitionBlockDelay);
+  }
 
   if (isCollapsed) {
     expandSection(elmRef);
