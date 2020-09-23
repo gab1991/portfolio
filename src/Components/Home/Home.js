@@ -1,15 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Button from '../../Components/UI/Button/Button';
-import sassVars from '../../Configs/Variables.scss';
-import useWindowSize from '../../Utils/CutomHooks/useWinowSize';
 import styles from './Home.module.scss';
 
-const mobileBreakPointWidth = parseInt(sassVars['breakpoints-mobile']);
-
 export default function Home(props) {
+  const { isMobile } = props;
   const [offset, setOffSet] = useState(0);
-  const { width } = useWindowSize();
-  const isMobile = mobileBreakPointWidth >= width;
 
   const goToPortfolio = () => {
     window.location.href = '#portfolio';
@@ -20,6 +15,7 @@ export default function Home(props) {
   };
 
   useEffect(() => {
+    if (isMobile) return;
     window.addEventListener('scroll', parralaxShift);
 
     return () => {

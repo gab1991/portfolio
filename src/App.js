@@ -24,7 +24,7 @@ function App() {
     <div className={styles.App}>
       <Header isMobile={isMobile} />
       <main>
-        <Home />
+        <Home isMobile={isMobile} />
         <Portfolio setShowModal={setShowModal} isMobile={isMobile} />
         <About />
       </main>
