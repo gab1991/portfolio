@@ -15,13 +15,16 @@ export default function Home(props) {
   };
 
   useEffect(() => {
-    if (isMobile) return;
-    window.addEventListener('scroll', parralaxShift);
-
+    if (isMobile) {
+      window.removeEventListener('scroll', parralaxShift);
+      return;
+    } else {
+      window.addEventListener('scroll', parralaxShift);
+    }
     return () => {
       window.removeEventListener('scroll', parralaxShift);
     };
-  }, []);
+  }, [isMobile]);
 
   return (
     <section

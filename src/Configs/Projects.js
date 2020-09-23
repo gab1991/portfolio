@@ -10,6 +10,9 @@ const personalInfo = {
   github: 'https://github.com/gab1991',
   resume_rus: resumeRus,
   resume_eng: resumeEng,
+  about_decription: `I’m a tenacious self-taught programmer, I use continuous iteration to
+  produce results quickly and continuously improve products. I find my
+  passion in learning and overcoming obstacles along the way.`,
 };
 
 function importAll(r) {
@@ -42,7 +45,7 @@ const projects = [
     name: 'Meteora-app',
     title: 'METEORA',
     description:
-      'This app is built on Socket.io library and supposed to be a Telegram killer. While using this app you should experience an increbile trip to distant planets.',
+      'This app is built on Socket.io library and supposed to be a Telegram killer. While using this app you should experience an incredible trip to distant planets.',
     technologies: {
       frontEnd: 'React | Socket.io | Redux | SASS',
       backEnd: 'NodeJs | Express | Socket.io | MySql',

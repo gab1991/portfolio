@@ -19,11 +19,7 @@ export default function About(props) {
   return (
     <section className={styles.About} id={'about'}>
       <h2 className={styles.Title}>ABOUT</h2>
-      <p className={styles.Description}>
-        I’m a tenacious self-taught programmer, I use continuous iteration to
-        produce results quickly and continuously improve products. I find my
-        passion in learning and overcoming obstacles along the way.
-      </p>
+      <p className={styles.Description}>{personalInfo.about_decription}</p>
       <ul className={styles.TechList}>
         <li>
           <span>{`What i use on the front-end : `}</span>
