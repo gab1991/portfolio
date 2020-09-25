@@ -48,7 +48,6 @@ $footer-background-color: $color-epsilon;
   li {
     padding: 0 20px;
     line-height: 1.5rem;
-
     border-right: 2px solid $font-main-color;
 
     @include respond-to('mobile') {

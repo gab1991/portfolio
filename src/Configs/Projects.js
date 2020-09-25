@@ -8,6 +8,7 @@ const personalInfo = {
   facebook: 'https://www.facebook.com/profile.php?id=100009140675554',
   telegram: 'https://t.me/IgorKornilov',
   github: 'https://github.com/gab1991',
+  linkedIn: `https://www.linkedin.com/in/igor-kornilov-988711151/`,
   resume_rus: resumeRus,
   resume_eng: resumeEng,
   about_decription: `I’m a tenacious self-taught programmer, I use continuous iteration to

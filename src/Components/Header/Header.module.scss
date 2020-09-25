@@ -1,5 +1,8 @@
 @import '../../Configs/Variables.scss';
 
+$mob-header-gradient-top-color: #012061;
+$mob-header-gradient-bottom-color: #28d8d5;
+
 .Header {
   position: absolute;
   height: 65px;
@@ -29,7 +32,11 @@
       align-items: center;
       justify-content: center;
 
-      background: linear-gradient(180deg, #012061 0%, #28d8d5 100%);
+      background: linear-gradient(
+        180deg,
+        $mob-header-gradient-top-color 0%,
+        $mob-header-gradient-bottom-color 100%
+      );
       box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.65);
       border-radius: 0px 0px 0px 10px;
 
@@ -63,10 +70,41 @@
     margin: 0 25px;
     flex: 1;
     font-size: 1.2rem;
-  }
+    position: relative;
 
-  @include respond-to('mobile') {
-    // display: none;
+    &::after {
+      content: '';
+      position: absolute;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-bottom: 2px solid transparent;
+      transition: all 300ms ease-in-out 100ms;
+    }
+
+    &:hover,
+    &:focus {
+      &::after {
+        border-bottom: 2px solid $font-main-color;
+      }
+    }
+
+    @include respond-to('mobile') {
+      &::after {
+        content: '';
+        pointer-events: none;
+        width: 0;
+        height: 0;
+        border-bottom: none;
+      }
+
+      &:hover,
+      &:focus {
+        transform: scale(1.1);
+      }
+    }
   }
 }
 

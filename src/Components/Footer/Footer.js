@@ -4,6 +4,25 @@ import Envelope from '../UI/SvgIcons/Envelope';
 import { personalInfo } from '../../Configs/Projects';
 import styles from '../Footer/Footer.module.scss';
 
+const footerLinks = [
+  {
+    txtContent: 'FACEBOOK',
+    href: personalInfo.facebook,
+  },
+  {
+    txtContent: 'TELEGRAM',
+    href: personalInfo.telegram,
+  },
+  {
+    txtContent: 'GITHUB',
+    href: personalInfo.github,
+  },
+  {
+    txtContent: 'LINKEDIN',
+    href: personalInfo.linkedIn,
+  },
+];
+
 export default function Footer(props) {
   const getInTouchHandler = () => {
     window.location = `mailto:${personalInfo.email}`;
@@ -19,30 +38,13 @@ export default function Footer(props) {
         onClick={getInTouchHandler}
       />
       <ul className={styles.ContacList}>
-        <li>
-          <a
-            href={personalInfo.facebook}
-            target="_blank"
-            rel="noopener noreferrer">
-            FACEBOOK
-          </a>
-        </li>
-        <li>
-          <a
-            href={personalInfo.telegram}
-            target="_blank"
-            rel="noopener noreferrer">
-            TELEGRAM
-          </a>
-        </li>
-        <li>
-          <a
-            href={personalInfo.github}
-            target="_blank"
-            rel="noopener noreferrer">
-            GITHUB
-          </a>
-        </li>
+        {footerLinks.map((link) => (
+          <li>
+            <a href={link.href} target="_blank" rel="noopener noreferrer">
+              {link.txtContent}
+            </a>
+          </li>
+        ))}
       </ul>
     </footer>
   );

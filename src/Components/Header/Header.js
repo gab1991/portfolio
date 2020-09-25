@@ -4,7 +4,27 @@ import HamburgerSvg from '../UI/SvgIcons/Hamburger';
 import EscSvg from '../UI/SvgIcons/Esc';
 import styles from './Header.module.scss';
 
+const headerLinks = [
+  {
+    txtContent: 'PORTFOLIO',
+    href: '#portfolio',
+  },
+  {
+    txtContent: 'ABOUT',
+    href: '#about',
+  },
+  {
+    txtContent: 'RESUME',
+    href: '#resume',
+  },
+  {
+    txtContent: 'CONTACTS',
+    href: '#contacts',
+  },
+];
+
 export default function Header(props) {
+  const { isMobile } = props;
   const [isNavOpen, setIsNavOpen] = useState(false);
   const navRef = useRef();
 
@@ -20,18 +40,11 @@ export default function Header(props) {
         className={`${styles.Nav} ${isNavOpen ? styles.NavOpen : ''}`}
         ref={navRef}>
         <ul>
-          <li>
-            <a href="#portfolio">PORTFOLIO</a>
-          </li>
-          <li>
-            <a href="#about">ABOUT</a>
-          </li>
-          <li>
-            <a href="#resume">RESUME</a>
-          </li>
-          <li>
-            <a href="#contacts">CONTACTS</a>
-          </li>
+          {headerLinks.map((link) => (
+            <li onClick={toggleNav}>
+              <a href={link.href}>{link.txtContent}</a>
+            </li>
+          ))}
         </ul>
         <div
           className={`${styles.EscSvgWrapper} ${
