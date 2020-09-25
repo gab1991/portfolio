@@ -6,8 +6,8 @@ import styles from '../Footer/Footer.module.scss';
 
 const footerLinks = [
   {
-    txtContent: 'FACEBOOK',
-    href: personalInfo.facebook,
+    txtContent: 'LINKEDIN',
+    href: personalInfo.linkedIn,
   },
   {
     txtContent: 'TELEGRAM',
@@ -16,10 +16,6 @@ const footerLinks = [
   {
     txtContent: 'GITHUB',
     href: personalInfo.github,
-  },
-  {
-    txtContent: 'LINKEDIN',
-    href: personalInfo.linkedIn,
   },
 ];
 
@@ -39,7 +35,7 @@ export default function Footer(props) {
       />
       <ul className={styles.ContacList}>
         {footerLinks.map((link) => (
-          <li>
+          <li key={link.txtContent}>
             <a href={link.href} target="_blank" rel="noopener noreferrer">
               {link.txtContent}
             </a>

@@ -24,7 +24,6 @@ const headerLinks = [
 ];
 
 export default function Header(props) {
-  const { isMobile } = props;
   const [isNavOpen, setIsNavOpen] = useState(false);
   const navRef = useRef();
 
@@ -41,7 +40,7 @@ export default function Header(props) {
         ref={navRef}>
         <ul>
           {headerLinks.map((link) => (
-            <li onClick={toggleNav}>
+            <li onClick={toggleNav} key={link.txtContent}>
               <a href={link.href}>{link.txtContent}</a>
             </li>
           ))}
