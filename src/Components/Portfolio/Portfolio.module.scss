@@ -25,7 +25,6 @@
     max-height: 600px;
     height: 50vh;
     background-color: $color-alpha;
-    -webkit-clip-path: url(#myClip);
     clip-path: url('#ribbonClipPath');
 
     svg {
