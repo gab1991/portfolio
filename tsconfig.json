@@ -9,7 +9,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
+    "jsx": "react",
     "removeComments": false,
     "allowJs": true /* Allow javascript files to be compiled. */,
     "checkJs": false /* Report errors in .js files. */,
