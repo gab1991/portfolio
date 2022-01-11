@@ -3,10 +3,12 @@ import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
 import 'normalize.css';
+import 'styles/globals.scss';
+import * as styles from './index.module.scss';
 
 export default function IndexPage() {
   return (
-    <main>
+    <main className={styles.main}>
       <h1>Hi people</h1>
       <p>Welcome to your new Gatsby site.</p>
       <p>Now go build something great.</p>
