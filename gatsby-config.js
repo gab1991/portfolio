@@ -35,5 +35,6 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-tsconfig-paths`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-svgr`,
   ],
 };
