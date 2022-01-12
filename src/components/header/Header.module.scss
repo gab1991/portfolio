@@ -44,10 +44,6 @@ $mob-header-gradient-bottom-color: #28d8d5;
     transition: all 300ms ease-in-out;
     transform: translateX(105%);
 
-    // &.StopTransitions {
-    //   transition: none !important;
-    // }
-
     &_open {
       transform: translateX(0%);
     }
@@ -125,19 +121,15 @@ $mob-header-gradient-bottom-color: #28d8d5;
   }
 }
 
-// .EscSvgWrapper {
-//   width: 15%;
+.navClosed {
+  animation: rotate 300ms ease-in-out;
+}
 
-//   &.NavClosed {
-//     animation: rotate 300ms ease-in-out;
-//   }
-// }
-
-// @keyframes rotate {
-//   from {
-//     transform: rotate(0deg);
-//   }
-//   to {
-//     transform: rotate(360deg);
-//   }
-// }
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

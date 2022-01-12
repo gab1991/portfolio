@@ -3,9 +3,10 @@ import { Button } from 'components';
 import { navigate } from 'gatsby';
 import { useViewDetection, useWindowSize } from 'hooks';
 import * as styles from './Home.module.scss';
+import { useGlobalContext } from 'context';
 
 export function Home() {
-  const { isMobile } = useViewDetection();
+  const { isMobile } = useGlobalContext();
   const goToPortfolio = () => navigate('#portfolio');
 
   return (

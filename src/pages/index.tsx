@@ -5,13 +5,18 @@ import { Header, Home } from 'components';
 import 'normalize.css';
 import 'styles/globals.scss';
 import * as styles from './index.module.scss';
+import { GlobalContextProvider } from 'context/global';
+import { useTempClassOnEvent } from 'hooks';
 
 export default function IndexPage() {
+  useTempClassOnEvent({ timeMs: 500, className: 'stop-transition', ev: 'resize' });
+
   return (
-    <main className={styles.main}>
-      <Header />
-      <Home />
-      {/* <h1>Hi people</h1>
+    <GlobalContextProvider>
+      <main className={styles.main}>
+        <Header />
+        <Home />
+        {/* <h1>Hi people</h1>
       <p>Welcome to your new Gatsby site.</p>
       <p>Now go build something great.</p>
       <StaticImage
@@ -28,6 +33,7 @@ export default function IndexPage() {
         <Link to="/using-ssr">Go to "Using SSR"</Link> <br />
         <Link to="/using-dsg">Go to "Using DSG"</Link>
       </p> */}
-    </main>
+      </main>
+    </GlobalContextProvider>
   );
 }

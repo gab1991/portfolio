@@ -40,7 +40,10 @@ export function Header() {
             </li>
           ))}
         </ul>
-        <EmptyBtn onClick={toggleNav} className={styles.svgBtnWrapper}>
+        <EmptyBtn
+          onClick={toggleNav}
+          className={cn(styles.svgBtnWrapper, { [styles.navClosed]: !isNavOpen })}
+        >
           <SVG.Esc />
         </EmptyBtn>
       </nav>
