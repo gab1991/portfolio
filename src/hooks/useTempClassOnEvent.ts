@@ -16,16 +16,18 @@ export function useTempClassOnEvent(props: IPropsUseTempClassOnEvent) {
 
       clearTimeout(resizeTimer.current);
 
-      resizeTimer.current = window.setTimeout(() => {
-        document.body.classList.remove(className);
-      }, timeMs);
+      resizeTimer.current =
+        window &&
+        window.setTimeout(() => {
+          document.body.classList.remove(className);
+        }, timeMs);
     };
 
-    window.addEventListener(ev, handler);
+    window && window.addEventListener(ev, handler);
 
     return () => {
       document.body.classList.remove(className);
-      window.removeEventListener(ev, handler);
+      window && window.removeEventListener(ev, handler);
     };
   }, []);
 }

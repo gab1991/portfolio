@@ -13,10 +13,10 @@ export function useWindowSize(): IUseWindowSize {
       setWindowSize(getSize());
     };
 
-    window.addEventListener('resize', resizeHandler);
+    globalThis.addEventListener('resize', resizeHandler);
 
     return () => {
-      window.removeEventListener('resize', resizeHandler);
+      globalThis.removeEventListener('resize', resizeHandler);
     };
   }, []);
 
@@ -25,7 +25,7 @@ export function useWindowSize(): IUseWindowSize {
 
 function getSize(): IUseWindowSize {
   return {
-    width: window.innerWidth,
-    height: window.innerHeight,
+    width: globalThis.innerWidth,
+    height: globalThis.innerHeight,
   };
 }
