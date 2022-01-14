@@ -1,0 +1,67 @@
+@import 'styles/vars.scss';
+
+.projectCard {
+  width: 100%;
+  min-height: 500px;
+  width: 100%;
+  min-width: 800px;
+  border-top: 1px solid hsla(0, 0%, 75.7%, 0.52549);
+  border-bottom: 1px solid hsla(0, 0%, 75.7%, 0.52549);
+
+  padding: 65px 30px;
+
+  display: flex;
+}
+
+.videoContainer {
+  width: 65%;
+}
+
+.descriptionContainer {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: $color-beta;
+  font-size: 30px;
+  text-transform: capitalize;
+  text-shadow: 5px 2px 5px rgb(0 0 0 / 30%);
+}
+
+.stackTitle {
+  @extend .title;
+  margin-top: 20px;
+}
+
+.description {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.techContainer {
+  width: 100%;
+}
+
+.subHeader {
+  align-self: flex-start;
+  color: #033b97;
+}
+
+.firstPart {
+  height: 40%;
+}
+
+.secondPart {
+  height: 60%;
+}
+
+.tech {
+  display: flex;
+}
+
+.techSvg {
+  width: 25px;
+  height: 25px;
+}

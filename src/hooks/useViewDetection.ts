@@ -13,7 +13,10 @@ export function useViewDetection(): IUseViewDetection {
   const { width } = useWindowSize();
 
   useEffect(() => {
-    setIsMobile(width < mobileBreakpoint);
+    const isMobileCurrent = width < mobileBreakpoint;
+    if (isMobileCurrent !== isMobile) {
+      setIsMobile(width < mobileBreakpoint);
+    }
   }, [width]);
 
   return { isMobile };

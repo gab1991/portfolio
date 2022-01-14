@@ -6,9 +6,10 @@ import { MobileRibbon } from './MobileRibbon';
 import { DesktopWave } from './DesktopWave';
 import { MobileWave } from './MobileWave';
 // import { projects } from '../../Configs/Projects';
-// import ProjectCardPc from './ProjectCard/ProjectCard';
+import { ProjectCard } from 'components';
 // import ProjectCardMobile from './ProjectCardMobile/ProjectCardMobile';
 import * as styles from './Portfolio.module.scss';
+import { IProject } from 'types/project';
 
 export const query = graphql`
   {
@@ -35,9 +36,7 @@ export const query = graphql`
 export function Portfolio() {
   const { isMobile } = useGlobalContext();
   const data = useStaticQuery(query);
-  const projects = data?.allProjectsJson?.nodes || [];
-
-  console.log(projects);
+  const projects = (data?.allProjectsJson?.nodes || []) as IProject[];
 
   return (
     <section className={styles.Portfolio} id={'portfolio'}>
@@ -58,6 +57,9 @@ export function Portfolio() {
       </div>
       <div className={styles.ProjectArea}>
         {isMobile && <h2>PROJECT PORTFOLIO</h2>}
+        {projects.map((project) => {
+          return <ProjectCard project={project} className={styles.ProjectCard} />;
+        })}
         {/* {projects.map((project, index) => {
           const ProjectCard = isMobile ? ProjectCardMobile : ProjectCardPc;
           return (
