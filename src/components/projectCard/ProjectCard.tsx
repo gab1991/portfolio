@@ -25,25 +25,38 @@ export function ProjectCard(props: IProjectCardProps) {
         </div>
         <div className={styles.secondPart}>
           <h3 className={styles.stackTitle}>TECH STACK</h3>
-          <div className={styles.techContainer}>
-            <h4 className={styles.subHeader}>FRONTEND :</h4>
-          </div>
-          <div className={styles.techContainer}>
-            <h4 className={styles.subHeader}>BACKEND :</h4>
-            <ul>
-              {project.technologies.backEnd.map((techname) => {
-                const IconMono = tech[techname].IconMono;
-                return (
-                  <li key={techname} className={styles.tech}>
-                    {techname}
-                    <IconMono className={styles.techSvg} />
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
+          <TechContainer project={project} section="frontEnd" />
+          <TechContainer project={project} section="backEnd" />
         </div>
       </div>
     </div>
+  );
+}
+
+interface ITechContainerProps extends HTMLAttributes<HTMLUListElement> {
+  project: IProject;
+  section: 'backEnd' | 'frontEnd';
+}
+
+function TechContainer(props: ITechContainerProps) {
+  const { project, section } = props;
+
+  return (
+    <ul className={styles.techContainer}>
+      <li>
+        <h4 className={styles.subHeader}>{section === 'backEnd' ? 'BACKEND :' : 'FRONTEND :'}</h4>
+      </li>
+      {project.technologies[section].map((techname, index, array) => {
+        const { IconMono, Icon, fullname } = tech[techname];
+        const isLast = index === array.length - 1;
+        return (
+          <li key={techname} className={styles.tech}>
+            {fullname}
+            <IconMono className={styles.techSvg} />
+            {!isLast && ` | `}
+          </li>
+        );
+      })}
+    </ul>
   );
 }

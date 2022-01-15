@@ -58,7 +58,9 @@ export function Portfolio() {
       <div className={styles.ProjectArea}>
         {isMobile && <h2>PROJECT PORTFOLIO</h2>}
         {projects.map((project) => {
-          return <ProjectCard project={project} className={styles.ProjectCard} />;
+          return (
+            <ProjectCard key={project.name} project={project} className={styles.ProjectCard} />
+          );
         })}
         {/* {projects.map((project, index) => {
           const ProjectCard = isMobile ? ProjectCardMobile : ProjectCardPc;
