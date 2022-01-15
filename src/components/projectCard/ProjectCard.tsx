@@ -1,10 +1,13 @@
-import React, { HTMLAttributes, useEffect, useRef } from 'react';
+import React, { HTMLAttributes, useEffect, useRef, useState } from 'react';
 import { IProject } from 'types/project';
 import cn from 'classnames';
 import { tech } from 'constants/tech';
 import { useIntersectionObserver } from 'hooks';
 
 import * as styles from './PojectCard.module.scss';
+import { GradientLink } from 'components/ui';
+import { SVG } from 'components/ui/svg';
+import { ProjectVideo } from 'components';
 
 interface IProjectCardProps extends HTMLAttributes<HTMLDivElement> {
   project: IProject;
@@ -14,16 +17,8 @@ interface IProjectCardProps extends HTMLAttributes<HTMLDivElement> {
 export function ProjectCard(props: IProjectCardProps) {
   const { project, className, isReversed, ...htmlProps } = props;
   const cardRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
+
   const { isVisible } = useIntersectionObserver({ ref: cardRef });
-
-  useEffect(() => {
-    if (!videoRef.current) {
-      return;
-    }
-
-    isVisible ? videoRef.current.play() : videoRef.current.pause();
-  }, [isVisible]);
 
   return (
     <div
@@ -32,20 +27,11 @@ export function ProjectCard(props: IProjectCardProps) {
       {...htmlProps}
     >
       <div className={styles.videoContainer}>
-        <video
-          ref={videoRef}
-          loop
-          muted
-          preload="true"
-          playsInline
-          className={cn(styles.video, {
-            [styles.video_visible]: isVisible,
-            [styles.video_reversed]: isReversed,
-          })}
-        >
-          {/* place video in static folder in the root */}
-          <source src={`/${project.video}`} type="video/webm" />
-        </video>
+        <ProjectVideo
+          isReversed={isReversed}
+          isVisible={isVisible}
+          videoLink={`/${project.video}`}
+        />
       </div>
       <div className={styles.descriptionContainer}>
         <div className={styles.firstPart}>
@@ -56,6 +42,20 @@ export function ProjectCard(props: IProjectCardProps) {
           <h3 className={styles.stackTitle}>TECH STACK</h3>
           <TechContainer project={project} section="frontEnd" isVisible={isVisible} />
           <TechContainer project={project} section="backEnd" isVisible={isVisible} />
+        </div>
+        <div className={styles.linksContainer}>
+          <GradientLink className={styles.gradientLink} href={project.links.live}>
+            <span>LIVE</span>
+            <SVG.World className={styles.gradientSvg} />
+          </GradientLink>
+          <GradientLink className={styles.gradientLink} href={project.links.frontEndCode}>
+            <span>FRONTEND CODE</span>
+            <SVG.Github className={styles.gradientSvg} />
+          </GradientLink>
+          <GradientLink className={styles.gradientLink} href={project.links.backEndCode}>
+            <span>BACKEND CODE</span>
+            <SVG.Github className={styles.gradientSvg} />
+          </GradientLink>
         </div>
       </div>
     </div>

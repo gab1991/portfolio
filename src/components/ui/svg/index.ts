@@ -38,8 +38,12 @@ import { ReactComponent as Vite } from './tech/vite.svg';
 import { ReactComponent as ViteMono } from './tech/vite_mono.svg';
 import { ReactComponent as Webpack } from './tech/webpack.svg';
 import { ReactComponent as WebpackMono } from './tech/webpack_mono.svg';
+import { ReactComponent as Github } from './github.svg';
+import { ReactComponent as World } from './world.svg';
 
 export const SVG = {
+  Github,
+  World,
   Esc,
   Hamburger,
   CSS,

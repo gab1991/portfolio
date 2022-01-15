@@ -1,0 +1,15 @@
+@import 'styles/vars.scss';
+
+.gradientBtn {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  cursor: pointer;
+  background: linear-gradient(80.28deg, #1a2552 9.35%, #1b4a94 46.7%, #1d9dda 96.34%);
+  border-radius: 14px;
+  padding: 7px 10px;
+  font-family: $font-secondary;
+  font-size: 0.9rem;
+  color: $color-alpha;
+  min-width: 120px;
+}

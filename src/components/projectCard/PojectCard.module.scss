@@ -26,38 +26,11 @@
   margin: auto 0;
 }
 
-.video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  box-shadow: 0 1px 1px 0 hsla(0, 0%, 100%, 0.15), 0 50px 100px -20px rgba(50, 50, 93, 0.3),
-    0 30px 60px -30px rgba(0, 0, 0, 0.5), -10px 10px 60px -10px rgba(103, 178, 111, 0.3);
-  transform-style: preserve-3d;
-  transition: transform 1s ease, filter 500ms ease-in-out;
-
-  will-change: transform, filter;
-  border-radius: 5px;
-
-  filter: saturate(50%);
-
-  &_visible {
-    filter: saturate(100%);
-
-    transform: perspective(600px) rotateY(5deg);
-  }
-
-  &_reversed#{&}_visible {
-    transform: perspective(600px) rotateY(-5deg);
-  }
-}
-
 .descriptionContainer {
-  width: 35%;
+  width: 40%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .title {
@@ -96,11 +69,20 @@
 }
 
 .firstPart {
-  height: 40%;
+  // height: 30%;
 }
 
 .secondPart {
-  height: 60%;
+  // height: 55%;
+}
+
+.linksContainer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
 }
 
 .tech {
@@ -114,4 +96,27 @@
   margin: 0 8px;
   width: 25px;
   height: 25px;
+}
+
+.gradientLink {
+  width: 30%;
+  justify-content: space-between;
+
+  padding-right: 5px;
+  transition: transform 200ms ease;
+  box-shadow: 0 0 20px rgb(0 0 0 / 50%);
+  font-size: 12px;
+
+  span {
+    flex: 1;
+    text-align: center;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+.gradientSvg {
+  width: 26px;
 }
