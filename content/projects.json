@@ -7,11 +7,11 @@
       "frontEnd": ["docker", "ts", "vite", "react", "mobx", "sass"],
       "backEnd": ["docker", "ts", "nest", "postgres", "socketio"]
     },
+    "video": "meteora.webm",
     "links": {
       "frontEndCode": "https://github.com/gab1991/online-chat",
       "backEndCode": "https://github.com/gab1991/online-chat-server",
-      "live": "http://meteora-app.igor-kornilov.com/",
-      "demo": "MeteoraVideo"
+      "live": "http://meteora-app.igor-kornilov.com/"
     }
   },
   {
@@ -22,11 +22,11 @@
       "frontEnd": ["ts", "webpack", "react", "redux", "sass"],
       "backEnd": ["ts", "express", "mongo"]
     },
+    "video": "retro.webm",
     "links": {
       "frontEndCode": "https://github.com/gab1991/retro-game-collection-app",
       "backEndCode": "https://github.com/gab1991/server-retro-game-collection-app",
-      "live": "http://retro-game-app.igor-kornilov.com/",
-      "demo": "RetroGameVideo"
+      "live": "http://retro-game-app.igor-kornilov.com/"
     }
   }
 ]

@@ -1,22 +1,51 @@
-import React, { HTMLAttributes } from 'react';
+import React, { HTMLAttributes, useEffect, useRef } from 'react';
 import { IProject } from 'types/project';
 import cn from 'classnames';
-import * as styles from './PojectCard.module.scss';
-import { StaticImage } from 'gatsby-plugin-image';
 import { tech } from 'constants/tech';
+import { useIntersectionObserver } from 'hooks';
+
+import * as styles from './PojectCard.module.scss';
 
 interface IProjectCardProps extends HTMLAttributes<HTMLDivElement> {
   project: IProject;
+  isReversed?: boolean;
 }
 
 export function ProjectCard(props: IProjectCardProps) {
-  const { project, className, ...htmlProps } = props;
+  const { project, className, isReversed, ...htmlProps } = props;
+  const cardRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const { isVisible } = useIntersectionObserver({ ref: cardRef });
 
-  console.log(project);
+  useEffect(() => {
+    if (!videoRef.current) {
+      return;
+    }
+
+    isVisible ? videoRef.current.play() : videoRef.current.pause();
+  }, [isVisible]);
+
   return (
-    <div className={cn(styles.projectCard, className)} {...htmlProps}>
+    <div
+      className={cn(styles.projectCard, { [styles.projectCard_reversed]: isReversed }, className)}
+      ref={cardRef}
+      {...htmlProps}
+    >
       <div className={styles.videoContainer}>
-        <StaticImage src="../../../assets/temp/meteora.jpg" alt="kek" />
+        <video
+          ref={videoRef}
+          loop
+          muted
+          preload="true"
+          playsInline
+          className={cn(styles.video, {
+            [styles.video_visible]: isVisible,
+            [styles.video_reversed]: isReversed,
+          })}
+        >
+          {/* place video in static folder in the root */}
+          <source src={`/${project.video}`} type="video/webm" />
+        </video>
       </div>
       <div className={styles.descriptionContainer}>
         <div className={styles.firstPart}>
@@ -25,8 +54,8 @@ export function ProjectCard(props: IProjectCardProps) {
         </div>
         <div className={styles.secondPart}>
           <h3 className={styles.stackTitle}>TECH STACK</h3>
-          <TechContainer project={project} section="frontEnd" />
-          <TechContainer project={project} section="backEnd" />
+          <TechContainer project={project} section="frontEnd" isVisible={isVisible} />
+          <TechContainer project={project} section="backEnd" isVisible={isVisible} />
         </div>
       </div>
     </div>
@@ -36,6 +65,7 @@ export function ProjectCard(props: IProjectCardProps) {
 interface ITechContainerProps extends HTMLAttributes<HTMLUListElement> {
   project: IProject;
   section: 'backEnd' | 'frontEnd';
+  isVisible?: boolean;
 }
 
 function TechContainer(props: ITechContainerProps) {

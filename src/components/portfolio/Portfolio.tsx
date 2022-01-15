@@ -5,7 +5,6 @@ import { DesktopRibbon } from './DesktopRibbon';
 import { MobileRibbon } from './MobileRibbon';
 import { DesktopWave } from './DesktopWave';
 import { MobileWave } from './MobileWave';
-// import { projects } from '../../Configs/Projects';
 import { ProjectCard } from 'components';
 // import ProjectCardMobile from './ProjectCardMobile/ProjectCardMobile';
 import * as styles from './Portfolio.module.scss';
@@ -21,11 +20,11 @@ export const query = graphql`
           backEnd
         }
         name
+        video
         links {
           frontEndCode
           backEndCode
           live
-          demo
         }
         description
       }
@@ -57,23 +56,16 @@ export function Portfolio() {
       </div>
       <div className={styles.ProjectArea}>
         {isMobile && <h2>PROJECT PORTFOLIO</h2>}
-        {projects.map((project) => {
-          return (
-            <ProjectCard key={project.name} project={project} className={styles.ProjectCard} />
-          );
-        })}
-        {/* {projects.map((project, index) => {
-          const ProjectCard = isMobile ? ProjectCardMobile : ProjectCardPc;
+        {projects.map((project, index) => {
           return (
             <ProjectCard
-              setShowModal={props.setShowModal}
-              {...project}
               key={project.name}
+              project={project}
               className={styles.ProjectCard}
-              isInverted={index % 2 === 0}
+              isReversed={index % 2 !== 0}
             />
           );
-        })} */}
+        })}
       </div>
       <div className={styles.BottomWaveWrapper}>
         <div className={styles.BottomWave}>{isMobile ? <MobileWave /> : <DesktopWave />}</div>

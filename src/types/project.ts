@@ -8,10 +8,10 @@ export interface IProject {
     frontEnd: AvailableTechnologies[];
     backEnd: AvailableTechnologies[];
   };
+  video: string;
   links: {
     frontEndCode: string;
     backEndCode: string;
     live: string;
-    demo: string;
   };
 }
