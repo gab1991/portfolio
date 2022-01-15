@@ -16,22 +16,25 @@ export function ProjectVideo(props: IProjectVideoProps) {
   const [isStoppedManually, setIsStoppedManually] = useState(false);
 
   useEffect(() => {
-    isVisible ? setIsPaused(false) : setIsPaused(true);
-    setIsStoppedManually(false);
+    isVisible ? playVideo() : pauseVideo();
   }, [isVisible]);
 
-  useEffect(() => {
-    if (!videoRef.current) {
-      return;
-    }
-
-    isPaused ? videoRef.current.pause() : videoRef.current.play();
-  }, [isPaused]);
-
   const onVideoClick = () => {
-    setIsPaused((prev) => !prev);
+    isPaused ? playVideo() : pauseVideo();
     setIsStoppedManually(true);
   };
+
+  const playVideo = () => {
+    setIsPaused(false);
+    setIsStoppedManually(false);
+    videoRef.current?.play();
+  };
+
+  const pauseVideo = () => {
+    setIsPaused(true);
+    videoRef.current?.pause();
+  };
+
   return (
     <div
       className={cn(styles.videoWrapper, {
