@@ -18,6 +18,7 @@ $font-secondary: 'Oswald', 'sans-serif';
 //Breakpoints
 $breakpoints: (
   'mobile': 768px,
+  'smallDesktop': 1100px,
 );
 
 @mixin respond-to($breakpoint) {
