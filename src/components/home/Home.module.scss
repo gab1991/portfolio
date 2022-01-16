@@ -3,8 +3,9 @@
 .home {
   height: 100vh;
   min-height: 800px;
-  background: url('../../../assets/images/header_background_hd.jpg');
+  // background: url('../../../assets/images/header_background_hd.jpg');
   background-size: 100% 100%;
+  position: relative;
 
   display: flex;
   flex-direction: column;
@@ -17,7 +18,7 @@
     justify-content: flex-start;
     padding-top: 20vh;
     min-height: 570px;
-    background: url('../../../assets/images/header_background_mobile.jpg');
+    // background: url('../../../assets/images/header_background_mobile.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
@@ -54,6 +55,15 @@
       text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
     }
   }
+}
+
+.backgroundImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .btn {
