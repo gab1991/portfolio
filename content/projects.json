@@ -8,6 +8,7 @@
       "backEnd": ["docker", "ts", "nest", "postgres", "socketio"]
     },
     "video": "meteora.webm",
+    "picture": "meteora",
     "links": {
       "frontEndCode": "https://github.com/gab1991/online-chat",
       "backEndCode": "https://github.com/gab1991/online-chat-server",
@@ -23,6 +24,7 @@
       "backEnd": ["ts", "express", "mongo"]
     },
     "video": "retro.webm",
+    "picture": "retro",
     "links": {
       "frontEndCode": "https://github.com/gab1991/retro-game-collection-app",
       "backEndCode": "https://github.com/gab1991/server-retro-game-collection-app",

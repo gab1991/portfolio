@@ -4,3 +4,5 @@ export * from './header';
 export * from './portfolio';
 export * from './projectCard';
 export * from './projectVideo';
+export * from './projectCardMobile';
+export * from './techContainer';

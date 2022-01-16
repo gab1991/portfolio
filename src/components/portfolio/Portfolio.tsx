@@ -1,14 +1,14 @@
 import React from 'react';
 import { useGlobalContext } from 'context';
+import { IProject } from 'types/project';
 import { useStaticQuery, graphql } from 'gatsby';
 import { DesktopRibbon } from './DesktopRibbon';
 import { MobileRibbon } from './MobileRibbon';
 import { DesktopWave } from './DesktopWave';
 import { MobileWave } from './MobileWave';
-import { ProjectCard } from 'components';
-// import ProjectCardMobile from './ProjectCardMobile/ProjectCardMobile';
+import { ProjectCard, ProjectCardMobile } from 'components';
+
 import * as styles from './Portfolio.module.scss';
-import { IProject } from 'types/project';
 
 export const query = graphql`
   {
@@ -21,6 +21,7 @@ export const query = graphql`
         }
         name
         video
+        picture
         links {
           frontEndCode
           backEndCode
@@ -57,7 +58,13 @@ export function Portfolio() {
       <div className={styles.ProjectArea}>
         {isMobile && <h2>PROJECT PORTFOLIO</h2>}
         {projects.map((project, index) => {
-          return (
+          return isMobile ? (
+            <ProjectCardMobile
+              key={project.name}
+              project={project}
+              className={styles.projectCardMobile}
+            />
+          ) : (
             <ProjectCard
               key={project.name}
               project={project}

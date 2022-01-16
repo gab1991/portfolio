@@ -1,13 +1,13 @@
 import React, { HTMLAttributes, useRef } from 'react';
 import { IProject } from 'types/project';
-import cn from 'classnames';
-import { tech } from 'constants/tech';
 import { useIntersectionObserver } from 'hooks';
-
-import * as styles from './PojectCard.module.scss';
 import { GradientLink } from 'components/ui';
 import { SVG } from 'components/ui/svg';
-import { ProjectVideo } from 'components';
+import { ProjectVideo, TechContainer } from 'components';
+
+import * as styles from './PojectCard.module.scss';
+
+import cn from 'classnames';
 
 interface IProjectCardProps extends HTMLAttributes<HTMLDivElement> {
   project: IProject;
@@ -59,34 +59,5 @@ export function ProjectCard(props: IProjectCardProps) {
         </div>
       </div>
     </div>
-  );
-}
-
-interface ITechContainerProps extends HTMLAttributes<HTMLUListElement> {
-  project: IProject;
-  section: 'backEnd' | 'frontEnd';
-  isVisible?: boolean;
-}
-
-function TechContainer(props: ITechContainerProps) {
-  const { project, section } = props;
-
-  return (
-    <ul className={styles.techContainer}>
-      <li>
-        <h4 className={styles.subHeader}>{section === 'backEnd' ? 'BACKEND :' : 'FRONTEND :'}</h4>
-      </li>
-      {project.technologies[section].map((techname, index, array) => {
-        const { IconMono, Icon, fullname } = tech[techname];
-        const isLast = index === array.length - 1;
-        return (
-          <li key={techname} className={styles.tech}>
-            {fullname}
-            <IconMono className={styles.techSvg} />
-            {!isLast && ` | `}
-          </li>
-        );
-      })}
-    </ul>
   );
 }

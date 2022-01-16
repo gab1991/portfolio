@@ -63,33 +63,6 @@ $page-breakpoint: 1100px;
   }
 }
 
-.techContainer {
-  margin-top: 20px;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.subHeader {
-  font-size: 20px;
-  align-self: flex-start;
-  color: #033b97;
-  margin-right: 10px;
-
-  @media (max-width: $page-breakpoint) {
-    font-size: 16px;
-  }
-}
-
-.firstPart {
-  // height: 30%;
-}
-
-.secondPart {
-  // height: 55%;
-}
-
 .linksContainer {
   margin-top: 20px;
   display: flex;
@@ -97,28 +70,6 @@ $page-breakpoint: 1100px;
   flex-wrap: wrap;
   gap: 10px;
   width: 100%;
-}
-
-.tech {
-  display: flex;
-  color: #033b97;
-  font-size: 20px;
-  align-items: center;
-
-  @media (max-width: $page-breakpoint) {
-    font-size: 16px;
-  }
-}
-
-.techSvg {
-  margin: 0 8px;
-  width: 25px;
-  height: 25px;
-
-  @media (max-width: $page-breakpoint) {
-    width: 16px;
-    height: 16px;
-  }
 }
 
 .gradientLink {
