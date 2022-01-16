@@ -47,15 +47,13 @@ export function Footer() {
     },
   ];
 
-  console.log(personal);
-
   return (
-    <footer className={styles.Footer} id={'contacts'}>
-      <ButtonLink href="mailto:someone@yoursite.com" className={styles.Btn}>
+    <footer className={styles.footer} id={'contacts'}>
+      <ButtonLink href="mailto:someone@yoursite.com" className={styles.btn}>
         <SVG.Email className={styles.emailIcon} />
         GET IN TOUCH
       </ButtonLink>
-      <ul className={styles.ContacList}>
+      <ul className={styles.contacList}>
         {footerLinks.map((link) => (
           <li key={link.txtContent}>
             <a href={link.href} target="_blank" rel="noopener noreferrer">
