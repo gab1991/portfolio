@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, useEffect, useRef, useState } from 'react';
+import React, { HTMLAttributes, useRef } from 'react';
 import { IProject } from 'types/project';
 import cn from 'classnames';
 import { tech } from 'constants/tech';
