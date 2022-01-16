@@ -7,7 +7,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { GradientLink, TechContainer } from 'components';
 import { SVG } from 'components/ui/svg';
 
-export const query = graphql`
+export const cardQuery = graphql`
   {
     allFile {
       nodes {
@@ -27,7 +27,7 @@ interface IProjectCardMobileProps extends HTMLAttributes<HTMLDivElement> {
 
 export function ProjectCardMobile(props: IProjectCardMobileProps) {
   const { project, className, isReversed, ...htmlProps } = props;
-  const { allFile } = useStaticQuery(query);
+  const { allFile } = useStaticQuery(cardQuery);
 
   const file = allFile.nodes.find((node: { name: string }) => node.name === project.picture);
   const image = file.childrenImageSharp[0].gatsbyImageData;

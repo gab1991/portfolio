@@ -39,7 +39,7 @@ export function Portfolio() {
   const projects = (data?.allProjectsJson?.nodes || []) as IProject[];
 
   return (
-    <section className={styles.Portfolio} id={'portfolio'}>
+    <section id={'portfolio'}>
       <div className={styles.WhiteRibbonWrapper}>
         <div className={styles.WhiteRibbon}>
           <div className={styles.SectionNameContainer}>

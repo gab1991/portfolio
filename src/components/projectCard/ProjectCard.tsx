@@ -34,11 +34,11 @@ export function ProjectCard(props: IProjectCardProps) {
         />
       </div>
       <div className={styles.descriptionContainer}>
-        <div className={styles.firstPart}>
+        <div>
           <h3 className={styles.title}>{project.title}</h3>
           <p className={styles.description}>{project.description}</p>
         </div>
-        <div className={styles.secondPart}>
+        <div>
           <h3 className={styles.stackTitle}>TECH STACK</h3>
           <TechContainer project={project} section="frontEnd" isVisible={isVisible} />
           <TechContainer project={project} section="backEnd" isVisible={isVisible} />

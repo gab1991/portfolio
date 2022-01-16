@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import { About, Header, Home, Portfolio } from 'components';
+import { About, Footer, Header, Home, Portfolio } from 'components';
 import 'normalize.css';
 import 'styles/globals.scss';
 import * as styles from './index.module.scss';
@@ -18,7 +18,7 @@ export default function IndexPage() {
         <Home />
         <Portfolio />
         <About />
-
+        <Footer />
         {/* <h1>Hi people</h1>
       <p>Welcome to your new Gatsby site.</p>
       <p>Now go build something great.</p>

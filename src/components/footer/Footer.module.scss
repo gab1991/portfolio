@@ -1,0 +1,78 @@
+@import 'styles/vars.scss';
+
+$footer-background-color: $color-epsilon;
+
+.Footer {
+  height: 300px;
+  background-color: $footer-background-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include respond-to('mobile') {
+    height: 200px;
+  }
+}
+
+.Btn {
+  margin: auto;
+  width: 400px;
+  // padding: 25px 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: $color-epsilon;
+
+  @include respond-to('mobile') {
+    width: 70%;
+    min-width: 200px;
+    max-width: 300px;
+
+    font-size: 1rem;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: $color-epsilon;
+  }
+}
+
+.ContacList {
+  margin: auto;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: $font-secondary;
+  font-size: 1.5rem;
+  color: $font-main-color;
+
+  li {
+    padding: 0 20px;
+    line-height: 1.5rem;
+    border-right: 2px solid $font-main-color;
+
+    @include respond-to('mobile') {
+      $list-item-height: 1.2rem;
+      padding: 0 10px;
+    }
+
+    a {
+      font-size: 1.5rem;
+      font-weight: 300;
+      border-bottom: 1px solid transparent;
+
+      @include respond-to('mobile') {
+        font-size: 1rem;
+      }
+
+      &:hover,
+      &:focus {
+        transition: all 300ms ease-in-out 100ms;
+        border-bottom: 1px solid $font-main-color;
+      }
+    }
+  }
+  li:nth-last-child(1) {
+    border-right: none;
+  }
+}

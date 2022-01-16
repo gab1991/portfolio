@@ -6,4 +6,5 @@ export * from './projectCard';
 export * from './projectVideo';
 export * from './projectCardMobile';
 export * from './techContainer';
-export * from './about/';
+export * from './about';
+export * from './footer';
