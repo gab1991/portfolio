@@ -43,6 +43,7 @@ export function ProjectVideo(props: IProjectVideoProps) {
         [styles.videoWrapper_reversed]: isReversed,
       })}
       onClick={onVideoClick}
+      aria-label="play/stop video"
     >
       <video ref={videoRef} loop muted preload="true" playsInline className={cn(styles.video)}>
         {/* place video in static folder in the root */}

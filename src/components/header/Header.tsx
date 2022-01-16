@@ -43,11 +43,12 @@ export function Header() {
         <EmptyBtn
           onClick={toggleNav}
           className={cn(styles.svgBtnWrapper, { [styles.navClosed]: !isNavOpen })}
+          aria-label="close navigation"
         >
           <SVG.Esc />
         </EmptyBtn>
       </nav>
-      <EmptyBtn onClick={toggleNav} className={styles.svgBtnWrapper}>
+      <EmptyBtn onClick={toggleNav} className={styles.svgBtnWrapper} aria-label="open navigation">
         <SVG.Hamburger />
       </EmptyBtn>
     </header>

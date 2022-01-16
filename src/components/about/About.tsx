@@ -1,9 +1,14 @@
+import React, { useRef } from 'react';
+
 import { DarkenLink } from 'components';
 import { SVG } from 'components/ui/svg';
 import { AvailableTechnologies, tech } from 'constants/tech';
+import { useGlobalContext } from 'context';
 import { graphql, useStaticQuery } from 'gatsby';
-import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
+
 import * as styles from './About.module.scss';
+import { useParallax } from 'hooks';
 
 export const aboutQuery = graphql`
   {
@@ -34,6 +39,9 @@ interface IAboutQuery {
 }
 
 export function About() {
+  const { isMobile } = useGlobalContext();
+  const ref = useRef<HTMLElement>(null);
+  const [parralaxShift] = useParallax({ speed: 0.5, ref });
   const query = useStaticQuery(aboutQuery);
   const { description, toolkitList } = query.site.siteMetadata.aboutPage as IAboutQuery;
   const pdfs: string[] = query.allFile.edges.map(
@@ -41,7 +49,27 @@ export function About() {
   );
 
   return (
-    <section className={styles.about} id="about">
+    <section className={styles.about} id="about" ref={ref}>
+      {isMobile ? (
+        <StaticImage
+          src="../../../assets/images/about_background_mobile.jpg"
+          alt="aboutBackground"
+          className={styles.backgroundImg}
+          style={{ position: 'absolute' }}
+          quality={90}
+          objectFit="fill"
+        />
+      ) : (
+        <StaticImage
+          src="../../../assets/images/about_background_hd.jpg"
+          alt="aboutBackground"
+          className={styles.backgroundImg}
+          style={{ position: 'absolute' }}
+          imgStyle={{ transform: `translate3d(0, ${parralaxShift}px, 0)` }}
+          quality={90}
+          objectFit="fill"
+        />
+      )}
       <h2 className={styles.title}>ABOUT</h2>
       <p className={styles.description}>{description}</p>
       <h3 className={styles.toolkitl}>TOOLKIT</h3>

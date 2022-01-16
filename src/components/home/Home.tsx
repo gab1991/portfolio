@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { ButtonLink } from 'components';
 
 import * as styles from './Home.module.scss';
@@ -8,15 +8,17 @@ import { useParallax } from 'hooks';
 
 export function Home() {
   const { isMobile } = useGlobalContext();
-  const [offsetY] = useParallax({ speed: 0.5 });
+  const ref = useRef<HTMLElement>(null);
+  const [parallax] = useParallax({ speed: 0.5, ref });
 
   return (
-    <section className={styles.home}>
+    <section className={styles.home} ref={ref}>
       {isMobile ? (
         <StaticImage
           src="../../../assets/images/header_background_mobile.jpg"
           alt="headerBackground"
           className={styles.backgroundImg}
+          style={{ position: 'absolute' }}
           quality={90}
           objectFit="fill"
         />
@@ -25,7 +27,8 @@ export function Home() {
           src="../../../assets/images/header_background_hd.jpg"
           alt="headerBackground"
           className={styles.backgroundImg}
-          imgStyle={{ transform: `translateY(${offsetY}px)` }}
+          style={{ position: 'absolute' }}
+          imgStyle={{ transform: `translate3d(0, ${parallax}px, 0)` }}
           quality={90}
           objectFit="fill"
         />
