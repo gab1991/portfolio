@@ -40,8 +40,6 @@ export function About() {
     (edge: { node: { publicURL: any } }) => edge.node.publicURL
   );
 
-  console.log(pdfs);
-
   return (
     <section className={styles.about} id="about">
       <h2 className={styles.title}>ABOUT</h2>

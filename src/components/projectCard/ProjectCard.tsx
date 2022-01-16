@@ -40,8 +40,8 @@ export function ProjectCard(props: IProjectCardProps) {
         </div>
         <div>
           <h3 className={styles.stackTitle}>TECH STACK</h3>
-          <TechContainer project={project} section="frontEnd" isVisible={isVisible} />
-          <TechContainer project={project} section="backEnd" isVisible={isVisible} />
+          <TechContainer project={project} section="frontEnd" />
+          <TechContainer project={project} section="backEnd" />
         </div>
         <div className={styles.linksContainer}>
           <GradientLink className={styles.gradientLink} href={project.links.live}>

@@ -7,7 +7,6 @@ import * as styles from './TechContainer.module.scss';
 interface ITechContainerProps extends HTMLAttributes<HTMLUListElement> {
   project: IProject;
   section: 'backEnd' | 'frontEnd';
-  isVisible?: boolean;
 }
 
 export function TechContainer(props: ITechContainerProps) {
