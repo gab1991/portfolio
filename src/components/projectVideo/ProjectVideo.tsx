@@ -36,19 +36,18 @@ export function ProjectVideo(props: IProjectVideoProps) {
   };
 
   return (
-    <div
+    <button
       className={cn(styles.videoWrapper, {
         [styles.videoWrapper_paused]: isPaused && isStoppedManually,
         [styles.videoWrapper_visible]: isVisible,
         [styles.videoWrapper_reversed]: isReversed,
       })}
       onClick={onVideoClick}
-      aria-labelledby={'button'}
     >
       <video ref={videoRef} loop muted preload="true" playsInline className={cn(styles.video)}>
         {/* place video in static folder in the root */}
         <source src={videoLink} type="video/webm" />
       </video>
-    </div>
+    </button>
   );
 }
