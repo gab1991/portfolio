@@ -29,6 +29,13 @@ module.exports = {
         'socketio',
       ],
     },
+    personal: {
+      email: 'gaber32188@gmail.com',
+      facebook: 'https://www.facebook.com/profile.php?id=100009140675554',
+      telegram: 'https://t.me/IgorKornilov',
+      github: 'https://github.com/gab1991',
+      linkedIn: `https://www.linkedin.com/in/igor-kornilov-988711151/`,
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

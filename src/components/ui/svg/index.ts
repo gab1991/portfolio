@@ -41,8 +41,10 @@ import { ReactComponent as WebpackMono } from './tech/webpack_mono.svg';
 import { ReactComponent as Github } from './github.svg';
 import { ReactComponent as World } from './world.svg';
 import { ReactComponent as Download } from './download.svg';
+import { ReactComponent as Email } from './email.svg';
 
 export const SVG = {
+  Email,
   Download,
   Github,
   World,

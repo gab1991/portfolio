@@ -17,22 +17,28 @@ $footer-background-color: $color-epsilon;
 
 .Btn {
   margin: auto;
-  width: 400px;
-  // padding: 25px 0;
-  padding-top: 25px;
-  padding-bottom: 25px;
   color: $color-epsilon;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
 
   @include respond-to('mobile') {
-    width: 70%;
-    min-width: 200px;
-    max-width: 300px;
-
     font-size: 1rem;
     padding-left: 20px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    color: $color-epsilon;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.emailIcon {
+  height: 40px;
+  margin-right: 40px;
+  fill: $color-gama;
+
+  @include respond-to('mobile') {
+    margin-right: 20px;
   }
 }
 
