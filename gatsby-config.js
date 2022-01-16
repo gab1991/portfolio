@@ -4,6 +4,31 @@ module.exports = {
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    aboutPage: {
+      description:
+        'I’m  a tenacious programmer, who enjoy tackling complex task. I use continuous iteration to produce results quickly and continuously improve products. I find my passion in learning and overcoming obstacles along the way.',
+      toolkitList: [
+        'js',
+        'ts',
+        'css',
+        'html',
+        'react',
+        'redux',
+        'sass',
+        'webpack',
+        'vite',
+        'mobx',
+        'jest',
+        'cypress',
+        'express',
+        'nodejs',
+        'docker',
+        'nest',
+        'postgres',
+        'mongo',
+        'socketio',
+      ],
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -15,6 +40,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/assets/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `resumes`,
+        path: `${__dirname}/assets/resumes`,
       },
     },
     `gatsby-transformer-json`,

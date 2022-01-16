@@ -8,7 +8,7 @@ export const tech = {
   react: { Icon: SVG.React, IconMono: SVG.ReactMono, fullname: 'React' },
   js: { Icon: SVG.Js, IconMono: SVG.JsMono, fullname: 'JS' },
   ts: { Icon: SVG.Ts, IconMono: SVG.TsMono, fullname: 'TS' },
-  html: { Icon: SVG.HTMLMono, IconMono: SVG.HTML, fullname: 'HTML' },
+  html: { Icon: SVG.HTML, IconMono: SVG.HTMLMono, fullname: 'HTML' },
   jest: { Icon: SVG.Jest, IconMono: SVG.JestMono, fullname: 'Jest' },
   cypress: { Icon: SVG.Cypress, IconMono: SVG.CypressMono, fullname: 'Cypress' },
   vite: { Icon: SVG.Vite, IconMono: SVG.ViteMono, fullname: 'Vite' },
