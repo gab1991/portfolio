@@ -9,24 +9,25 @@
 }
 
 .subHeader {
-  font-size: 20px;
+  font-size: 1.25rem;
   align-self: flex-start;
   color: #033b97;
   margin-right: 10px;
 
   @include respond-to('smallDesktop') {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 
 .tech {
   display: flex;
   color: #033b97;
-  font-size: 20px;
+  font-size: 1.25rem;
+
   align-items: center;
 
   @include respond-to('smallDesktop') {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 
