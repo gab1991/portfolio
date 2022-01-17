@@ -1,5 +1,10 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
+import { navigate } from 'gatsby';
 
 export default function ErrorPage() {
-  return <div>ooops</div>;
+  useLayoutEffect(() => {
+    navigate('/');
+  }, []);
+
+  return <div />;
 }
