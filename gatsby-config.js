@@ -1,9 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Igor Kornilov | Front End Engineer`,
+    description: `Professional web developer at your service! Excels at TS, JS. React, Redux, Mobx, SPA. Don't hesitate hit me up!`,
+    author: `Igor Kornlov gaber32188@gmail.com`,
+    keywords: `frontend, front end, fullstack, js, javascript, ts, typescript, css, html, react, redux, sass, webpack, vite, mobx, jest, cypress, express, nodejs, node, nestjs`,
+    image: 'assets/images/social_sharing.jpg',
     aboutPage: {
       description:
         'I’m  a tenacious programmer, who enjoy tackling complex task. I use continuous iteration to produce results quickly and continuously improve products. I find my passion in learning and overcoming obstacles along the way.',

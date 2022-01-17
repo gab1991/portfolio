@@ -27,6 +27,7 @@
   "devDependencies": {
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
+    "@types/react-helmet": "^6.1.5",
     "gatsby-plugin-tsconfig-paths": "^1.0.5",
     "gatsby-plugin-typescript": "^4.4.0",
     "prettier": "^2.5.1",

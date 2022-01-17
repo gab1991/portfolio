@@ -8,3 +8,4 @@ export * from './projectCardMobile';
 export * from './techContainer';
 export * from './about';
 export * from './footer';
+export * from './seo';
