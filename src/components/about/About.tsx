@@ -56,8 +56,8 @@ export function About() {
           alt="aboutBackground"
           className={styles.backgroundImg}
           style={{ position: 'absolute' }}
-          quality={90}
-          objectFit="fill"
+          quality={80}
+          width={768}
         />
       ) : (
         <StaticImage
@@ -67,7 +67,7 @@ export function About() {
           style={{ position: 'absolute' }}
           imgStyle={{ transform: `translate3d(0, ${parralaxShift}px, 0)` }}
           quality={90}
-          objectFit="fill"
+          width={1600}
         />
       )}
       <h2 className={styles.title}>ABOUT</h2>
@@ -77,10 +77,10 @@ export function About() {
         {toolkitList.map((technology) => {
           const { fullname, IconMono } = tech[technology];
           return (
-            <div key={technology} className={styles.techContainer}>
+            <li key={technology} className={styles.techContainer}>
               <IconMono className={styles.icon} />
               {fullname}
-            </div>
+            </li>
           );
         })}
       </ul>

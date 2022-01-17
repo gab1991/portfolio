@@ -19,8 +19,9 @@ export function Home() {
           alt="headerBackground"
           className={styles.backgroundImg}
           style={{ position: 'absolute' }}
-          quality={90}
-          objectFit="fill"
+          quality={80}
+          aspectRatio={1}
+          width={768}
         />
       ) : (
         <StaticImage
@@ -30,7 +31,8 @@ export function Home() {
           style={{ position: 'absolute' }}
           imgStyle={{ transform: `translate3d(0, ${parallax}px, 0)` }}
           quality={90}
-          objectFit="fill"
+          width={1600}
+          aspectRatio={16 / 9}
         />
       )}
 
