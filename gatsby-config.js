@@ -82,5 +82,18 @@ module.exports = {
     `gatsby-plugin-tsconfig-paths`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-svgr`,
+    {
+      resolve: `gatsby-plugin-google-fonts-with-attributes`,
+      options: {
+        fonts: [
+          `oswald\:400`,
+          `open sans\:400,600,700`, // you can also specify font weights and styles
+        ],
+        display: 'swap',
+        attributes: {
+          rel: 'stylesheet preload prefetch',
+        },
+      },
+    },
   ],
 };
