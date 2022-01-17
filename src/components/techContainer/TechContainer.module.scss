@@ -1,0 +1,43 @@
+@import 'styles/vars.scss';
+
+.techContainer {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.subHeader {
+  font-size: 1.25rem;
+  align-self: flex-start;
+  color: #033b97;
+  margin-right: 10px;
+
+  @include respond-to('smallDesktop') {
+    font-size: 1rem;
+  }
+}
+
+.tech {
+  display: flex;
+  color: #033b97;
+  font-size: 1.25rem;
+
+  align-items: center;
+
+  @include respond-to('smallDesktop') {
+    font-size: 1rem;
+  }
+}
+
+.techSvg {
+  margin: 0 8px;
+  width: 25px;
+  height: 25px;
+
+  @include respond-to('smallDesktop') {
+    width: 16px;
+    height: 16px;
+  }
+}

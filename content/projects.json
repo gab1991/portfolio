@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Meteora-app",
+    "title": "METEORA",
+    "description": "Backend is built on NestJ+Socket.io stack, and frontend implements feature-sliced architecture https://feature-sliced.design . By the way, this app supposed to be a Telegram killer. While using this app you experience an incredible trip to distant planets.",
+    "technologies": {
+      "frontEnd": ["docker", "ts", "vite", "react", "mobx", "sass"],
+      "backEnd": ["docker", "ts", "nest", "postgres", "socketio"]
+    },
+    "video": "meteora.webm",
+    "picture": "meteora",
+    "links": {
+      "frontEndCode": "https://github.com/gab1991/online-chat",
+      "backEndCode": "https://github.com/gab1991/online-chat-server",
+      "live": "http://meteora-app.igor-kornilov.com/"
+    }
+  },
+  {
+    "name": "Retro-game-app",
+    "title": "RETRO GAME COLLECTION",
+    "description": "App is focused on helping retro game geeks to find new lots on ebay and maintain their collection. Pure nostalgia included.",
+    "technologies": {
+      "frontEnd": ["ts", "webpack", "react", "redux", "sass"],
+      "backEnd": ["ts", "express", "mongo"]
+    },
+    "video": "retro.webm",
+    "picture": "retro",
+    "links": {
+      "frontEndCode": "https://github.com/gab1991/retro-game-collection-app",
+      "backEndCode": "https://github.com/gab1991/server-retro-game-collection-app",
+      "live": "http://retro-game-app.igor-kornilov.com/"
+    }
+  }
+]

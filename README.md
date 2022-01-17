@@ -1,3 +1,1 @@
-Portfolio project.
-Nothing special in it.
-Based on ReactJs
+Personal portfolio page

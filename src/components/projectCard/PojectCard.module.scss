@@ -1,0 +1,102 @@
+@import 'styles/vars.scss';
+
+.projectCard {
+  width: 100%;
+  min-height: 500px;
+  width: 100%;
+  min-width: 800px;
+  border-top: 1px solid hsla(0, 0%, 75.7%, 0.52549);
+  border-bottom: 1px solid hsla(0, 0%, 75.7%, 0.52549);
+
+  padding: 65px 30px;
+
+  display: flex;
+  justify-content: space-between;
+
+  &_reversed {
+    flex-direction: row-reverse;
+  }
+}
+
+.videoContainer {
+  position: relative;
+  width: 55%;
+
+  aspect-ratio: 16/9;
+  margin: auto 0;
+}
+
+.descriptionContainer {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  text-align: center;
+
+  color: $color-beta;
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  text-shadow: 5px 2px 5px rgb(0 0 0 / 30%);
+
+  @include respond-to('smallDesktop') {
+    font-size: 1.5rem;
+  }
+}
+
+.stackTitle {
+  @extend .title;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.description {
+  margin-top: 20px;
+  font-size: 1.2rem;
+
+  @include respond-to('smallDesktop') {
+    font-size: 0.8rem;
+  }
+}
+
+.linksContainer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
+
+.gradientLink {
+  width: 30%;
+  justify-content: space-between;
+
+  padding-right: 5px;
+  transition: transform 200ms ease;
+  box-shadow: 0 0 20px rgb(0 0 0 / 50%);
+  font-size: 0.75rem;
+
+  span {
+    flex: 1;
+    text-align: center;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  @include respond-to('smallDesktop') {
+    font-size: 0.625rem;
+  }
+}
+
+.gradientSvg {
+  width: 26px;
+
+  @include respond-to('smallDesktop') {
+    width: 20px;
+  }
+}

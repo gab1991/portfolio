@@ -1,0 +1,86 @@
+@import 'styles/vars.scss';
+
+.projectCardMobile {
+  display: flex;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 4px 15px rgb(0 0 0 / 30%);
+  flex-direction: column;
+  align-items: center;
+  padding: 0 5% 50px 5%;
+}
+
+.img {
+  transform: translateY(-5%);
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgb(0 0 0 / 30%);
+  border-radius: 5px;
+  aspect-ratio: 16/9;
+}
+
+.title {
+  text-align: center;
+  color: $color-beta;
+  font-size: 1.875rem;
+  text-transform: capitalize;
+  text-shadow: 2px 2px 4px rgb(0 0 0 / 25%);
+  color: #003180;
+  font-size: 1.7rem;
+}
+
+.descr {
+  font-family: $font-main;
+  margin: 20px 0;
+}
+
+.techHeading {
+  font-family: $font-secondary;
+  font-weight: normal;
+  color: $color-beta;
+  font-size: 1.3rem;
+  text-shadow: 5px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.techContainer {
+  h4 {
+    font-size: 1.125rem;
+  }
+
+  li {
+    font-size: 1.125rem;
+  }
+
+  svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+.linksContainer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
+
+.gradientLink {
+  width: 100px;
+  justify-content: space-between;
+
+  padding-right: 5px;
+  transition: transform 200ms ease;
+  box-shadow: 0 0 20px rgb(0 0 0 / 50%);
+  font-size: 0.75rem;
+
+  span {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+.gradientSvg {
+  width: 26px;
+}

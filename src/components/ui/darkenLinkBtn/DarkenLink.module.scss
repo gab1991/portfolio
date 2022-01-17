@@ -1,0 +1,17 @@
+@import 'styles/vars.scss';
+
+.darkenLink {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: $color-epsilon;
+  padding: 20px 30px;
+  border-radius: 15px;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  transition: all 0.4s ease-in-out;
+
+  &:hover {
+    background-color: darken($color: $color-epsilon, $amount: 15);
+  }
+}
