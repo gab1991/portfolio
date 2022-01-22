@@ -26,9 +26,6 @@ export function ProjectCard(props: IProjectCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
 
   const { isVisible } = useIntersectionObserver({ ref: cardRef });
-
-  console.log(meteoraVideo, retroVideo);
-
   return (
     <div
       className={cn(styles.projectCard, { [styles.projectCard_reversed]: isReversed }, className)}
