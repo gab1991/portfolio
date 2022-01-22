@@ -9,7 +9,6 @@ export interface IProject {
     backEnd: AvailableTechnologies[];
   };
   picture: string;
-  video: string;
   links: {
     frontEndCode: string;
     backEndCode: string;

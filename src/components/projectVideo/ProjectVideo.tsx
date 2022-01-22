@@ -46,8 +46,7 @@ export function ProjectVideo(props: IProjectVideoProps) {
       aria-label="play/stop video"
     >
       <video ref={videoRef} loop muted preload="true" playsInline className={cn(styles.video)}>
-        {/* place video in static folder in the root */}
-        <source src={videoLink} type="video/webm" />
+        <source src={videoLink} type="video/mp4" />
       </video>
     </button>
   );

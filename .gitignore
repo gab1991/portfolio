@@ -1,5 +1,7 @@
 # static assets
 static
+# video assets
+assets/videos
 
 # Logs
 logs

@@ -20,7 +20,6 @@ export const query = graphql`
           backEnd
         }
         name
-        video
         picture
         links {
           frontEndCode

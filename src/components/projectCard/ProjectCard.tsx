@@ -4,10 +4,17 @@ import { useIntersectionObserver } from 'hooks';
 import { GradientLink } from 'components/ui';
 import { SVG } from 'components/ui/svg';
 import { ProjectVideo, TechContainer } from 'components';
+import meteoraVideo from '/assets/videos/meteora.mp4';
+import retroVideo from '/assets/videos/retro.mp4';
 
 import * as styles from './PojectCard.module.scss';
 
 import cn from 'classnames';
+
+const videMapper: Record<string, string> = {
+  'Meteora-app': meteoraVideo,
+  'Retro-game-app': retroVideo,
+};
 
 interface IProjectCardProps extends HTMLAttributes<HTMLDivElement> {
   project: IProject;
@@ -20,6 +27,8 @@ export function ProjectCard(props: IProjectCardProps) {
 
   const { isVisible } = useIntersectionObserver({ ref: cardRef });
 
+  console.log(meteoraVideo, retroVideo);
+
   return (
     <div
       className={cn(styles.projectCard, { [styles.projectCard_reversed]: isReversed }, className)}
@@ -30,7 +39,7 @@ export function ProjectCard(props: IProjectCardProps) {
         <ProjectVideo
           isReversed={isReversed}
           isVisible={isVisible}
-          videoLink={`/${project.video}`}
+          videoLink={videMapper[project.name]}
         />
       </div>
       <div className={styles.descriptionContainer}>
