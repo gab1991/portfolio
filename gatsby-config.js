@@ -70,10 +70,8 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
+        background_color: `#455CDA`,
+        theme_color: `#455CDA`,
         display: `minimal-ui`,
         icon: `assets/images/icon.png`, // This path is relative to the root of the site.
       },
