@@ -30,8 +30,7 @@ export const aboutQuery = graphql`
   }
 `;
 
-const resumeRusRegExp = /resume_rus/i;
-const resumeEngRegExp = /resume_eng/i;
+const resumeEngRegExp = /resume/i;
 
 interface IAboutQuery {
   description: string;
@@ -86,14 +85,6 @@ export function About() {
       </ul>
       <div className={styles.resumeSection} id="resume">
         {pdfs.map((pdfLink) => {
-          if (resumeRusRegExp.test(pdfLink)) {
-            return (
-              <DarkenLink key={pdfLink} className={styles.darkenLink} href={pdfLink}>
-                <SVG.Download className={styles.downloadSvg} />
-                Download Resume (RUS)
-              </DarkenLink>
-            );
-          }
           if (resumeEngRegExp.test(pdfLink)) {
             return (
               <DarkenLink key={pdfLink} className={styles.darkenLink} href={pdfLink}>
