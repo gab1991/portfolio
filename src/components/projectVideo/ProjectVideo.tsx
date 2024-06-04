@@ -1,15 +1,18 @@
 import React, { HTMLAttributes, useEffect, useRef, useState } from 'react';
 import * as styles from './ProjectVideo.module.scss';
+import retroVideo from '../../../assets/videos/retro.webm';
+import meteoraVideo from '../../../assets/videos/meteora.webm';
+
 import cn from 'classnames';
 
 interface IProjectVideoProps extends HTMLAttributes<HTMLDivElement> {
   isVisible?: boolean;
   isReversed?: boolean;
-  videoLink: string;
+  projectName: string;
 }
 
 export function ProjectVideo(props: IProjectVideoProps) {
-  const { isVisible, isReversed, videoLink } = props;
+  const { isVisible, isReversed, projectName } = props;
 
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPaused, setIsPaused] = useState(false);
@@ -46,8 +49,7 @@ export function ProjectVideo(props: IProjectVideoProps) {
       aria-label="play/stop video"
     >
       <video ref={videoRef} loop muted preload="true" playsInline className={cn(styles.video)}>
-        {/* place video in static folder in the root */}
-        <source src={videoLink} type="video/webm" />
+        <source src={projectName === 'Meteora-app' ? meteoraVideo : retroVideo} type="video/webm" />
       </video>
     </button>
   );

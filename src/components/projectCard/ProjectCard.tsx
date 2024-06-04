@@ -27,11 +27,7 @@ export function ProjectCard(props: IProjectCardProps) {
       {...htmlProps}
     >
       <div className={styles.videoContainer}>
-        <ProjectVideo
-          isReversed={isReversed}
-          isVisible={isVisible}
-          videoLink={`/${project.video}`}
-        />
+        <ProjectVideo isReversed={isReversed} isVisible={isVisible} projectName={project.name} />
       </div>
       <div className={styles.descriptionContainer}>
         <div>
