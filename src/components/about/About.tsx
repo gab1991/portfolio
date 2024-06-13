@@ -49,23 +49,23 @@ export function About() {
 
   return (
     <section className={styles.about} id="about" ref={ref}>
-      {isMobile ? (
+      {isMobile && (
         <StaticImage
           src="../../../assets/images/about_background_mobile.jpg"
           alt="aboutBackground"
           className={styles.backgroundImg}
           style={{ position: 'absolute' }}
-          quality={80}
+          quality={100}
           width={768}
         />
-      ) : (
+      )}
+      {!isMobile && (
         <StaticImage
           src="../../../assets/images/about_background_hd.jpg"
           alt="aboutBackground"
           className={styles.backgroundImg}
-          style={{ position: 'absolute' }}
-          imgStyle={{ transform: `translate3d(0, ${parralaxShift}px, 0)` }}
-          quality={90}
+          style={{ position: 'absolute', transform: `translate3d(0, ${parralaxShift}px, 0)` }}
+          quality={100}
           width={1600}
         />
       )}
