@@ -2,13 +2,12 @@ import React from 'react';
 import { useGlobalContext } from 'context';
 import { IProject } from 'types/project';
 import { useStaticQuery, graphql } from 'gatsby';
-import { DesktopRibbon } from './DesktopRibbon';
-import { MobileRibbon } from './MobileRibbon';
 import { DesktopWave } from './DesktopWave';
 import { MobileWave } from './MobileWave';
 import { ProjectCard, ProjectCardMobile } from 'components';
 
 import * as styles from './Portfolio.module.scss';
+import { WhiteRibbon } from 'components/whiteRibbon';
 
 export const query = graphql`
   {
@@ -40,21 +39,16 @@ export function Portfolio() {
 
   return (
     <section id={'portfolio'}>
-      <div className={styles.WhiteRibbonWrapper}>
-        <div className={styles.WhiteRibbon}>
-          <div className={styles.SectionNameContainer}>
-            {isMobile ? (
-              <h3>FRONT END FOCUSED WITH FULLSTACK EXPERIENCE</h3>
-            ) : (
-              <>
-                <h2>PORTFOLIO</h2>
-                <h3>Below you can see some of my projects I've been working on lately</h3>
-              </>
-            )}
-          </div>
-          {isMobile ? <MobileRibbon /> : <DesktopRibbon />}
-        </div>
-      </div>
+      <WhiteRibbon>
+        {isMobile ? (
+          <h3>FRONT END FOCUSED WITH FULLSTACK EXPERIENCE</h3>
+        ) : (
+          <>
+            <h2>PORTFOLIO</h2>
+            <h3>Below you can see some of my projects I've been working on lately</h3>
+          </>
+        )}
+      </WhiteRibbon>
       <div className={styles.ProjectArea}>
         {isMobile && <h2>PROJECT PORTFOLIO</h2>}
         {projects.map((project, index) => {

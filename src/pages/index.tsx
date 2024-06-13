@@ -1,5 +1,5 @@
 import React from 'react';
-import { About, Footer, Header, Home, Portfolio, Seo } from 'components';
+import { About, Footer, Header, Home, Portfolio, Seo, Experience } from 'components';
 import { GlobalContextProvider } from 'context/global';
 import { useTempClassOnEvent } from 'hooks';
 import 'normalize.css';
@@ -15,6 +15,7 @@ export default function IndexPage() {
       <main className={styles.main}>
         <Header />
         <Home />
+        <Experience />
         <Portfolio />
         <About />
         <Footer />
