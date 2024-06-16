@@ -28,6 +28,11 @@ module.exports = {
         'postgres',
         'mongo',
         'socketio',
+        'rollup',
+        'postcss',
+        'playwright',
+        'selenium',
+        'turborepo',
       ],
     },
     personal: {

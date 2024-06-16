@@ -18,7 +18,7 @@ export function TechContainer(props: ITechContainerProps) {
         <h4 className={styles.subHeader}>{section === 'backEnd' ? 'BACKEND :' : 'FRONTEND :'}</h4>
       </li>
       {project.technologies[section].map((techname, index, array) => {
-        const { IconMono, Icon, fullname } = tech[techname];
+        const { IconMono, fullname } = tech[techname];
         const isLast = index === array.length - 1;
         return (
           <li key={techname} className={styles.tech}>

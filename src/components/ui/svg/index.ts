@@ -44,6 +44,11 @@ import { ReactComponent as Download } from './download.svg';
 import { ReactComponent as Email } from './email.svg';
 import { ReactComponent as Connector } from './connector.svg';
 import { ReactComponent as ConnectorStraight } from './connector-straight.svg';
+import { ReactComponent as PlaywrightMono } from './tech/playwrwight_mono.svg';
+import { ReactComponent as PostCssMono } from './tech/postcss_mono.svg';
+import { ReactComponent as RollupMono } from './tech/rollup_mono.svg';
+import { ReactComponent as SeleniumMono } from './tech/selenium_mono.svg';
+import { ReactComponent as TurborepoMono } from './tech/turborepo_mono.svg';
 
 // workplaces
 import { ReactComponent as Giosg } from './workplaces/giosg.svg';
@@ -104,4 +109,9 @@ export const SVG = {
   Ulmart,
   Connector,
   ConnectorStraight,
+  PlaywrightMono,
+  PostCssMono,
+  RollupMono,
+  SeleniumMono,
+  TurborepoMono,
 };
