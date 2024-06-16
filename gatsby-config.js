@@ -84,17 +84,34 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-svgr`,
     {
-      resolve: `gatsby-plugin-google-fonts-with-attributes`,
+      resolve: `gatsby-omni-font-loader`,
       options: {
-        fonts: [
-          `oswald\:400`,
-          `open sans\:400,600,700`, // you can also specify font weights and styles
+        enableListener: true,
+        preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+        web: [
+          {
+            name: `Open Sans`,
+            file: `https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap`,
+          },
+          {
+            name: `Oswald`,
+            file: `https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap`,
+          },
         ],
-        display: 'swap',
-        attributes: {
-          rel: 'stylesheet preload prefetch',
-        },
       },
     },
+    // {
+    //   resolve: `gatsby-plugin-google-fonts-with-attributes`,
+    //   options: {
+    //     fonts: [
+    //       `oswald\:400`,
+    //       `open sans\:400,600,700`, // you can also specify font weights and styles
+    //     ],
+    //     display: 'swap',
+    //     attributes: {
+    //       rel: 'stylesheet preload prefetch',
+    //     },
+    //   },
+    // },
   ],
 };
