@@ -13,24 +13,24 @@ export function Home() {
 
   return (
     <section className={styles.home} ref={ref}>
-      {isMobile ? (
+      {isMobile && (
         <StaticImage
           src="../../../assets/images/header_background_mobile.jpg"
           alt="headerBackground"
           className={styles.backgroundImg}
           style={{ position: 'absolute' }}
-          quality={80}
+          quality={100}
           aspectRatio={1}
           width={768}
         />
-      ) : (
+      )}
+      {!isMobile && (
         <StaticImage
           src="../../../assets/images/header_background_hd.jpg"
           alt="headerBackground"
           className={styles.backgroundImg}
-          style={{ position: 'absolute' }}
-          imgStyle={{ transform: `translate3d(0, ${parallax}px, 0)` }}
-          quality={90}
+          style={{ position: 'absolute', transform: `translate3d(0, ${parallax}px, 0)` }}
+          quality={100}
           width={1600}
           aspectRatio={16 / 9}
         />

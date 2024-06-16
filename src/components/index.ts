@@ -9,3 +9,5 @@ export * from './techContainer';
 export * from './about';
 export * from './footer';
 export * from './seo';
+export * from './experience';
+export * from './experienceCard';

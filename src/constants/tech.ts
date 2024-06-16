@@ -20,6 +20,11 @@ export const tech = {
   nest: { Icon: SVG.Nest, IconMono: SVG.NestMono, fullname: 'NestJS' },
   postgres: { Icon: SVG.Postgres, IconMono: SVG.PostgresMono, fullname: 'PostgreSQL' },
   mongo: { Icon: SVG.Mongo, IconMono: SVG.MongoMono, fullname: 'Mongo DB' },
+  playwright: { IconMono: SVG.PlaywrightMono, fullname: 'Playwright' },
+  postcss: { IconMono: SVG.PostCssMono, fullname: 'PostCSS' },
+  rollup: { IconMono: SVG.RollupMono, fullname: 'Rollup' },
+  selenium: { IconMono: SVG.SeleniumMono, fullname: 'Selenium' },
+  turborepo: { IconMono: SVG.TurborepoMono, fullname: 'Turborepo' },
 } as const;
 
 export type AvailableTechnologies = keyof typeof tech;
