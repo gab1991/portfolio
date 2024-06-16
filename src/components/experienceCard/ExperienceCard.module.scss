@@ -7,6 +7,11 @@
   background-color: $color-alpha;
   color: $color-beta;
   font-weight: 600;
+
+  @include respond-to('mobile') {
+    width: 100%;
+    padding: 10px 16px;
+  }
 }
 
 .breakLine {
@@ -29,6 +34,11 @@
   width: 100%;
   gap: 12px;
   font-size: 22px;
+
+  @include respond-to('mobile') {
+    font-size: 20px;
+    gap: 10px;
+  }
 }
 
 .term {
@@ -42,6 +52,10 @@
   font-size: 18px;
   color: $color-gama;
   padding: 16px 22px;
+
+  @include respond-to('mobile') {
+    font-size: 14px;
+  }
 }
 
 .svgContainer {
@@ -55,4 +69,8 @@
 
 .svg {
   height: 68px;
+
+  @include respond-to('mobile') {
+    height: 48px;
+  }
 }

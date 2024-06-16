@@ -1,6 +1,7 @@
 import React from 'react';
 import * as styles from './ExperienceCard.module.scss';
 import { Workplace } from 'constants/workplaces';
+import { useGlobalContext } from 'context';
 
 interface ExperienceCard extends React.HTMLAttributes<HTMLDivElement> {
   workplace: Workplace;
@@ -12,8 +13,10 @@ export const ExperienceCard = ({
   orientation = 'left',
   ...htmlProps
 }: ExperienceCard) => {
+  const { isMobile } = useGlobalContext();
+
   return (
-    <div className={styles.expCard} {...htmlProps}>
+    <div className={styles.expCard} data-mobile={isMobile} {...htmlProps}>
       <div className={styles.svgContainer} data-orientation={orientation}>
         <workplace.svg className={styles.svg} />
       </div>

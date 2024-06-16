@@ -1,7 +1,5 @@
 @import 'styles/vars.scss';
 
-$desktop-scale-down-breakpoint: 110px;
-
 .experience {
   position: relative;
   display: flex;
@@ -44,7 +42,8 @@ $desktop-scale-down-breakpoint: 110px;
   padding: calc(400px + 5vh) 0;
 
   @include respond-to('mobile') {
-    padding: calc(140px + 5vh) 0;
+    padding-top: calc(140px + 5vh);
+    gap: 50px;
   }
 }
 
@@ -68,5 +67,21 @@ $desktop-scale-down-breakpoint: 110px;
   &[data-orientation='left'] {
     transform: scaleX(-1);
     left: calc(900px + 10px);
+  }
+
+  @media screen and (width < calc($max-app-width-desktop - 100px)) {
+    opacity: 0;
+  }
+}
+
+.connectorSvgMobile {
+  position: absolute;
+  height: 40px;
+  right: 50%;
+  top: -45px;
+
+  &[data-mobile='false'] {
+    height: 88px;
+    top: -94px;
   }
 }

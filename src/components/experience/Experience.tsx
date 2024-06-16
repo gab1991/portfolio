@@ -6,14 +6,18 @@ import { WhiteRibbon } from '../whiteRibbon';
 import { ExperienceCard } from '../experienceCard';
 
 import * as styles from './Experience.module.scss';
-import { useParallax } from 'hooks';
+import { useParallax, useWindowSize } from 'hooks';
 import { workplaces } from 'constants/workplaces';
 import { SVG } from 'components/ui/svg';
 
 export function Experience() {
   const { isMobile } = useGlobalContext();
+  const { width } = useWindowSize();
   const ref = useRef<HTMLElement>(null);
+
   const [parralaxShift] = useParallax({ speed: 0.5, ref });
+
+  const showBentSvg = width > 1500;
 
   return (
     <section className={styles.experience} id="experience" ref={ref}>
@@ -24,12 +28,20 @@ export function Experience() {
       <ul className={styles.cardContainer}>
         {workplaces.map((workplace, index) => {
           const orientation = index % 2 !== 0 ? 'right' : 'left';
+          const isFirst = index === 0;
 
           return (
             <li key={workplace.name} className={styles.listItem} data-orientation={orientation}>
               <ExperienceCard workplace={workplace} orientation={orientation} />
-              {index !== 0 && (
+              {!isFirst && showBentSvg && (
                 <SVG.Connector className={styles.connectorSvg} data-orientation={orientation} />
+              )}
+              {!isFirst && !showBentSvg && (
+                <SVG.ConnectorStraight
+                  className={styles.connectorSvgMobile}
+                  data-orientation={orientation}
+                  data-mobile={isMobile}
+                />
               )}
             </li>
           );
