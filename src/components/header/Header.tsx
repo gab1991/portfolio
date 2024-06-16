@@ -12,7 +12,7 @@ const headerLinks = [
     href: '#experience',
   },
   {
-    txtContent: 'PORTFOLIO',
+    txtContent: 'PROJECTS',
     href: '#portfolio',
   },
   {

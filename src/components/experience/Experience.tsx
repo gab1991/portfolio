@@ -38,13 +38,14 @@ export function Experience() {
               data-atr={String(isFirst) + String(showStraightSvg)}
             >
               <ExperienceCard workplace={workplace} orientation={orientation} />
-              {!isFirst && showStraightSvg ? (
+              {!isFirst && showStraightSvg && (
                 <SVG.ConnectorStraight
                   className={styles.connectorSvgMobile}
                   data-orientation={orientation}
                   data-mobile={isMobile}
                 />
-              ) : (
+              )}
+              {!isFirst && !showStraightSvg && (
                 <SVG.Connector className={styles.connectorSvg} data-orientation={orientation} />
               )}
             </li>

@@ -44,8 +44,8 @@ export function Portfolio() {
           <h3>FRONT END FOCUSED WITH FULLSTACK EXPERIENCE</h3>
         ) : (
           <>
-            <h2>PORTFOLIO</h2>
-            <h3>Below you can see some of my projects I've been working on lately</h3>
+            <h2>PROJECTS</h2>
+            <h3>Open source and pet projects I've worked on</h3>
           </>
         )}
       </WhiteRibbon>
