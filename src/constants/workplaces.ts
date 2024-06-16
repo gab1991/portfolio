@@ -19,7 +19,7 @@ export const workplaces = [
     title: 'Software Engineer',
     period: 'October 2020 - March 2022',
     bulletPoints: [
-      'Working on one of the biggest customer experience platform in Russia.',
+      'Worked on one of the biggest customer experience platform in Russia.',
       'Wrote a few new modules to the platform',
       'Introduced async routing and async library loading  to improve the  speed of the app.',
       'Migrated the main oprosso app to a new bundler which improved greatly the speed of development',
@@ -34,7 +34,7 @@ export const workplaces = [
     bulletPoints: [
       'Got invited to work in a small freelance studio.',
       'Working on various projects mainly on React, JQuery, CSS, HTML, JS.',
-      'Did most of the markup and landing pages.',
+      'Did most of the markup and css work for the team.',
     ],
   },
   {
