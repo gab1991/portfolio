@@ -17,7 +17,7 @@ export function Experience() {
 
   const [parralaxShift] = useParallax({ speed: 0.5, ref });
 
-  const showBentSvg = width > 1500;
+  const showStraightSvg = width < 1500;
 
   return (
     <section className={styles.experience} id="experience" ref={ref}>
@@ -31,17 +31,21 @@ export function Experience() {
           const isFirst = index === 0;
 
           return (
-            <li key={workplace.name} className={styles.listItem} data-orientation={orientation}>
+            <li
+              key={workplace.name + index}
+              className={styles.listItem}
+              data-orientation={orientation}
+              data-atr={String(isFirst) + String(showStraightSvg)}
+            >
               <ExperienceCard workplace={workplace} orientation={orientation} />
-              {!isFirst && showBentSvg && (
-                <SVG.Connector className={styles.connectorSvg} data-orientation={orientation} />
-              )}
-              {!isFirst && !showBentSvg && (
+              {!isFirst && showStraightSvg ? (
                 <SVG.ConnectorStraight
                   className={styles.connectorSvgMobile}
                   data-orientation={orientation}
                   data-mobile={isMobile}
                 />
+              ) : (
+                <SVG.Connector className={styles.connectorSvg} data-orientation={orientation} />
               )}
             </li>
           );

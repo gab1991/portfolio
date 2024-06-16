@@ -69,7 +69,7 @@
     left: calc(900px + 10px);
   }
 
-  @media screen and (width < calc($max-app-width-desktop - 100px)) {
+  @media (width < 1500px) {
     opacity: 0;
   }
 }
