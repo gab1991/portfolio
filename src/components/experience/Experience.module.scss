@@ -35,3 +35,14 @@ $desktop-scale-down-breakpoint: 110px;
   height: 100%;
   z-index: -2;
 }
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: calc(400px + 5vh) 0;
+
+  @include respond-to('mobile') {
+    padding: calc(140px + 5vh) 0;
+  }
+}

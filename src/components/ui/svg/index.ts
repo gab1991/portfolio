@@ -42,6 +42,12 @@ import { ReactComponent as Github } from './github.svg';
 import { ReactComponent as World } from './world.svg';
 import { ReactComponent as Download } from './download.svg';
 import { ReactComponent as Email } from './email.svg';
+// workplaces
+import { ReactComponent as Giosg } from './workplaces/giosg.svg';
+import { ReactComponent as Oprosso } from './workplaces/oprosso.svg';
+import { ReactComponent as Rostelecom } from './workplaces/rostelecom.svg';
+import { ReactComponent as SelfEmployed } from './workplaces/self-employed.svg';
+import { ReactComponent as Ulmart } from './workplaces/ulmart.svg';
 
 export const SVG = {
   Email,
@@ -88,4 +94,9 @@ export const SVG = {
   TsMono,
   Vite,
   ViteMono,
+  Giosg,
+  Oprosso,
+  Rostelecom,
+  SelfEmployed,
+  Ulmart,
 };

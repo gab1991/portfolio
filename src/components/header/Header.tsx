@@ -8,6 +8,10 @@ import * as styles from './Header.module.scss';
 
 const headerLinks = [
   {
+    txtContent: 'EXPERIENCE',
+    href: '#experience',
+  },
+  {
     txtContent: 'PORTFOLIO',
     href: '#portfolio',
   },

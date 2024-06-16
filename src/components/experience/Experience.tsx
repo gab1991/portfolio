@@ -3,9 +3,11 @@ import React, { useRef } from 'react';
 import { useGlobalContext } from 'context';
 import { StaticImage } from 'gatsby-plugin-image';
 import { WhiteRibbon } from '../whiteRibbon';
+import { ExperienceCard } from '../experienceCard';
 
 import * as styles from './Experience.module.scss';
 import { useParallax } from 'hooks';
+import { workplaces } from 'constants/workplaces';
 
 export function Experience() {
   const { isMobile } = useGlobalContext();
@@ -18,6 +20,16 @@ export function Experience() {
         <h2>EXPERIENCE</h2>
         <h3>Explore my career journey</h3>
       </WhiteRibbon>
+      <ul className={styles.cardContainer}>
+        {workplaces.map((workplace, index) => (
+          <li key={workplace.name}>
+            <ExperienceCard
+              workplace={workplace}
+              orientation={index % 2 !== 0 ? 'right' : 'left'}
+            />
+          </li>
+        ))}
+      </ul>
       {isMobile && (
         <StaticImage
           src="../../../assets/images/about_background_mobile.jpg"
