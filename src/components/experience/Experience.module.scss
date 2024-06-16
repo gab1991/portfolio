@@ -39,10 +39,34 @@ $desktop-scale-down-breakpoint: 110px;
 .cardContainer {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  width: 100%;
+  gap: 100px;
   padding: calc(400px + 5vh) 0;
 
   @include respond-to('mobile') {
     padding: calc(140px + 5vh) 0;
+  }
+}
+
+.listItem {
+  display: flex;
+  position: relative;
+  width: 100%;
+
+  &[data-orientation='right'] {
+    flex-direction: row-reverse;
+  }
+}
+
+.connectorSvg {
+  position: absolute;
+  height: 300px;
+  width: 250px;
+  left: calc(1440px - 900px - 260px);
+  top: -90px;
+
+  &[data-orientation='left'] {
+    transform: scaleX(-1);
+    left: calc(900px + 10px);
   }
 }

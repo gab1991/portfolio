@@ -42,6 +42,8 @@ import { ReactComponent as Github } from './github.svg';
 import { ReactComponent as World } from './world.svg';
 import { ReactComponent as Download } from './download.svg';
 import { ReactComponent as Email } from './email.svg';
+import { ReactComponent as Connector } from './connector.svg';
+
 // workplaces
 import { ReactComponent as Giosg } from './workplaces/giosg.svg';
 import { ReactComponent as Oprosso } from './workplaces/oprosso.svg';
@@ -99,4 +101,5 @@ export const SVG = {
   Rostelecom,
   SelfEmployed,
   Ulmart,
+  Connector,
 };
